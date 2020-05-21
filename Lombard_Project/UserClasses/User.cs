@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lombard_Project.UserClasses
 {
+    [Serializable]
     public abstract class User
     {
         public abstract int ID { set; get; }

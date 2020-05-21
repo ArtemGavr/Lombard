@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lombard_Project.UserClasses
 {
+    [Serializable]
     public class Application
     {
         //public string Name { set; get; }

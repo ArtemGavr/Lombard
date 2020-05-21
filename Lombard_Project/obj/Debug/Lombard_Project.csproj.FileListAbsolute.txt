@@ -1,9 +1,8 @@
-C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\bin\Debug\Lombard_Project.exe.config
-C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\bin\Debug\Lombard_Project.exe
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\bin\Debug\Lombard_Project.pdb
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.csprojAssemblyReference.cache
-C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.InitialForm.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.Properties.Resources.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.csproj.GenerateResource.cache
-C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.exe
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.pdb
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\bin\Debug\Lombard_Project.dll.config
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\bin\Debug\Lombard_Project.dll
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\Lombard_Project\obj\Debug\Lombard_Project.dll

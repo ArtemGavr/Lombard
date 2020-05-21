@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Lombard_Project
+namespace Lombard_Project.FilesWorkk
 {
     public class FilesWork
     {

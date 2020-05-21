@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lombard_Project.FilesWorkk;
 
 namespace Lombard_Project.UserClasses
 {
+    [Serializable]
     public class Lombard
     {
 

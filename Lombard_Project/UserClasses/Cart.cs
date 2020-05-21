@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lombard_Project.UserClasses
 {
+    [Serializable]
     class Cart
     {
         public List<Product> LikedProducts { private set; get; }
