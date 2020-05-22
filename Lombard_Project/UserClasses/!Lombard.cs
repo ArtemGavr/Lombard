@@ -13,13 +13,17 @@ namespace Lombard_Project.UserClasses
 
         public List<Product> Products { private set; get; }
         public List<Client> Clients { private set; get; }
-        public List<Application> Applications { private set; get; }
+        public List<MyApplication> ApplicationsToAdmin { private set; get; }
+        public List<MyApplication> ApplicationsToUser { private set; get; }
+
+        public bool IsDirty = false;
 
         public Lombard()
         {
             Products = new List<Product>();
             Clients = new List<Client>();
-            Applications = new List<Application>();
+            ApplicationsToAdmin = new List<MyApplication>();
+            ApplicationsToUser = new List<MyApplication>();
         }
 
         public void FillTestData(int n)
@@ -46,12 +50,20 @@ namespace Lombard_Project.UserClasses
                 Clients.Add(new Client(i + 10000, $"Buer{i}", "123"));
             }
 
-            // Applications
-            Applications.Clear();
+            // ApplicationsToAdmin
+            ApplicationsToAdmin.Clear();
             const int m = 3;
             for (int i = 0; i < m; i++)
             {
-                Applications.Add( new Application(Products[i], Clients[i]));
+                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[i]));
+            }
+
+            // ApplicationsToUser
+            ApplicationsToUser.Clear();
+            //const int m = 3;
+            for (int i = 0; i < m; i++)
+            {
+                ApplicationsToUser.Add( new MyApplication(Products[i], Clients[i]));
                 //var ps = new List<Portion>();
                 //for (int j = 0; j < m; j++)
                 //{

@@ -107,9 +107,11 @@ namespace ClientApp
                     // uniwue users
                     if (lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password) != null)
                     {
-                        MessageBox.Show($"Hello, Dear {login}! We wish you to have a nice day)");
+                        //MessageBox.Show($"Hello, Dear {login}! We wish you to have a nice day)");
 
-                        this.Hide();
+                    Form main = new ClientMain(ref lombard, lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password));
+                    main.Show();
+                    this.Hide();
                     }
                     else
                     {
@@ -122,6 +124,9 @@ namespace ClientApp
             }
         }
 
-        
+        //private void Login_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }

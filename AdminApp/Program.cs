@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClientApp
+namespace AdminApp
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ClientApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignUpForm());
+            Application.Run(new AdminMain());
         }
     }
 }

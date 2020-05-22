@@ -54,9 +54,12 @@ namespace ClientApp
             else if (RegPassword.Text.Length <= 4 || RegPassword.Text.Length >= 10)
             {
                 RegPassword.BackColor = Color.Red;
+                RegPassReenter.BackColor = Color.Red;
                 MessageBox.Show("Password has inappropriate length, try again");
                 RegPassword.BackColor = Color.White;
                 RegPassword.Text = string.Empty;
+                RegPassReenter.BackColor = Color.White;
+                RegPassReenter.Text = string.Empty;
             }
             else if ( RegPassReenter.Text != RegPassword.Text)
             {
@@ -96,16 +99,38 @@ namespace ClientApp
                     lombard.Clients.Add(user);
                     MessageBox.Show("We are glad to hear you joined us!");
                     lombard.Save();
-                    Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
-                    CustomerAutor.Left = this.Left;
-                    CustomerAutor.Top = this.Top;
-                    CustomerAutor.Show();
+                    Form main = new ClientMain(ref lombard,  user );
+                    main.Show();
+                    
                     this.Close();
 
                 }
 
 
             }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
+            CustomerAutor.Left = this.Left;
+            CustomerAutor.Top = this.Top;
+            CustomerAutor.Show();
+            this.Close();
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
+            CustomerAutor.Left = this.Left;
+            CustomerAutor.Top = this.Top;
+            CustomerAutor.Show();
+            
         }
     }
 }

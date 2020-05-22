@@ -149,6 +149,7 @@
             this.Login.TabIndex = 0;
             this.Login.Text = "Log In";
             this.Login.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            //this.Login.Click += new System.EventHandler(this.Login_Click);
             this.Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.Login.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 
