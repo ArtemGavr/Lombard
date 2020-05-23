@@ -19,31 +19,18 @@ namespace AdminApp
         {
             InitializeComponent();
             lombard = new Lombard();
-            //BindingSource binding = new BindingSource();
-            //binding.DataSource = lombard.ApplicationsToAdmin;
-
-            ////bind datagridview to binding source
-            //ApplicsBindingSource.DataSource = binding;
-            ////adminMainBindingSource.DataSource = lombard.ApplicationsToAdmin;
-
+            productBindingSource.DataSource = lombard.Products;
             myApplicationBindingSource1.DataSource = lombard.ApplicationsToAdmin;
         }
 
         private void AdminMain_Load(object sender, EventArgs e)
         {
             lombard.Load();
-           
-
-            
+            productBindingSource.ResetBindings(false);
             myApplicationBindingSource1.ResetBindings(false);
         }
 
-        private void buttonApplications_Click(object sender, EventArgs e)
-        {
-            Form aplics = new AplicsView(ref lombard);
-            this.Hide();
-            aplics.Show();
-        }
+    
 
         private void AdminMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -112,9 +99,20 @@ namespace AdminApp
         private void dataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var toedit = dataGridViewApplics.Rows[e.RowIndex].DataBoundItem as MyApplication;
-            Form edit = new EditionForm(ref lombard, toedit, e.RowIndex);
-            this.Hide();
-            edit.Show();
+            var edit = new EditionForm(toedit);
+            if (edit.ShowDialog() == DialogResult.OK)
+            {
+                lombard.ApplicationsToAdmin.Remove(edit.work);///
+                lombard.ApplicationsToUser.Add(edit.work);
+                lombard.Save();
+                myApplicationBindingSource1.ResetBindings(false);
+            }
+        }
+
+        private void AdminMain_Shown(object sender, EventArgs e)
+        {
+           // lombard.Load();
+           // myApplicationBindingSource1.ResetBindings(false);
         }
 
 

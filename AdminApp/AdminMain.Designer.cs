@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonApplications = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,33 +39,39 @@
             this.jjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1products = new System.Windows.Forms.TabPage();
+            this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giverDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageApplications = new System.Windows.Forms.TabPage();
             this.dataGridViewApplics = new System.Windows.Forms.DataGridView();
+            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1products.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.tabPageApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonApplications
-            // 
-            this.buttonApplications.Location = new System.Drawing.Point(1073, 36);
-            this.buttonApplications.Name = "buttonApplications";
-            this.buttonApplications.Size = new System.Drawing.Size(50, 52);
-            this.buttonApplications.TabIndex = 0;
-            this.buttonApplications.Text = "Applications";
-            this.buttonApplications.UseVisualStyleBackColor = true;
-            this.buttonApplications.Click += new System.EventHandler(this.buttonApplications_Click);
-            // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(1027, 619);
+            this.buttonExit.Location = new System.Drawing.Point(1036, 619);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(96, 58);
+            this.buttonExit.Size = new System.Drawing.Size(82, 58);
             this.buttonExit.TabIndex = 1;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -74,6 +79,8 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -81,10 +88,12 @@
             this.jjToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(1123, 36);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 3);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(43, 680);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical270;
             // 
             // saveToolStripMenuItem
             // 
@@ -94,7 +103,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(33, 42);
             this.saveToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem1
@@ -125,28 +134,144 @@
             // jjToolStripMenuItem
             // 
             this.jjToolStripMenuItem.Name = "jjToolStripMenuItem";
-            this.jjToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.jjToolStripMenuItem.Size = new System.Drawing.Size(33, 53);
             this.jjToolStripMenuItem.Text = "Help";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1products);
             this.tabControl1.Controls.Add(this.tabPageApplications);
-            this.tabControl1.Location = new System.Drawing.Point(12, 36);
+            this.tabControl1.Location = new System.Drawing.Point(46, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1009, 641);
+            this.tabControl1.Size = new System.Drawing.Size(987, 680);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1products
             // 
+            this.tabPage1products.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1products.Controls.Add(this.dataGridViewProducts);
+            this.tabPage1products.Controls.Add(this.menuStrip2);
             this.tabPage1products.Location = new System.Drawing.Point(4, 29);
             this.tabPage1products.Name = "tabPage1products";
             this.tabPage1products.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1products.Size = new System.Drawing.Size(1001, 608);
+            this.tabPage1products.Size = new System.Drawing.Size(979, 647);
             this.tabPage1products.TabIndex = 0;
             this.tabPage1products.Text = "Products";
-            this.tabPage1products.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewProducts
+            // 
+            this.dataGridViewProducts.AllowUserToAddRows = false;
+            this.dataGridViewProducts.AllowUserToDeleteRows = false;
+            this.dataGridViewProducts.AutoGenerateColumns = false;
+            this.dataGridViewProducts.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.valueDataGridViewTextBoxColumn,
+            this.dateTimeDataGridViewTextBoxColumn,
+            this.giverDataGridViewTextBoxColumn1,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn});
+            this.dataGridViewProducts.DataSource = this.productBindingSource;
+            this.dataGridViewProducts.Location = new System.Drawing.Point(3, 39);
+            this.dataGridViewProducts.Name = "dataGridViewProducts";
+            this.dataGridViewProducts.ReadOnly = true;
+            this.dataGridViewProducts.RowHeadersWidth = 62;
+            this.dataGridViewProducts.RowTemplate.Height = 28;
+            this.dataGridViewProducts.Size = new System.Drawing.Size(963, 572);
+            this.dataGridViewProducts.TabIndex = 4;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // valueDataGridViewTextBoxColumn
+            // 
+            this.valueDataGridViewTextBoxColumn.DataPropertyName = "Value";
+            this.valueDataGridViewTextBoxColumn.HeaderText = "Value";
+            this.valueDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
+            this.valueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valueDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dateTimeDataGridViewTextBoxColumn
+            // 
+            this.dateTimeDataGridViewTextBoxColumn.DataPropertyName = "DateTime";
+            this.dateTimeDataGridViewTextBoxColumn.HeaderText = "DateTime";
+            this.dateTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.dateTimeDataGridViewTextBoxColumn.Name = "dateTimeDataGridViewTextBoxColumn";
+            this.dateTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateTimeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // giverDataGridViewTextBoxColumn1
+            // 
+            this.giverDataGridViewTextBoxColumn1.DataPropertyName = "Giver";
+            this.giverDataGridViewTextBoxColumn1.HeaderText = "Giver";
+            this.giverDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.giverDataGridViewTextBoxColumn1.Name = "giverDataGridViewTextBoxColumn1";
+            this.giverDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.giverDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descriptionDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(973, 33);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // tabPageApplications
             // 
@@ -154,15 +279,16 @@
             this.tabPageApplications.Location = new System.Drawing.Point(4, 29);
             this.tabPageApplications.Name = "tabPageApplications";
             this.tabPageApplications.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageApplications.Size = new System.Drawing.Size(1001, 608);
+            this.tabPageApplications.Size = new System.Drawing.Size(979, 647);
             this.tabPageApplications.TabIndex = 1;
             this.tabPageApplications.Text = "Applications";
             this.tabPageApplications.UseVisualStyleBackColor = true;
             // 
             // dataGridViewApplics
             // 
-            this.dataGridViewApplics.AllowUserToOrderColumns = true;
+            this.dataGridViewApplics.AllowUserToAddRows = false;
             this.dataGridViewApplics.AutoGenerateColumns = false;
+            this.dataGridViewApplics.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewApplics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewApplics.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prodDataGridViewTextBoxColumn,
@@ -170,12 +296,16 @@
             this.dataGridViewApplics.DataSource = this.myApplicationBindingSource1;
             this.dataGridViewApplics.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewApplics.Name = "dataGridViewApplics";
+            this.dataGridViewApplics.ReadOnly = true;
             this.dataGridViewApplics.RowHeadersWidth = 62;
             this.dataGridViewApplics.RowTemplate.Height = 28;
-            this.dataGridViewApplics.Size = new System.Drawing.Size(998, 605);
+            this.dataGridViewApplics.Size = new System.Drawing.Size(502, 605);
             this.dataGridViewApplics.TabIndex = 0;
-            this.dataGridViewApplics.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewApplics_CellContentDoubleClick);
             this.dataGridViewApplics.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewApplics_CellContentDoubleClick);
+            // 
+            // myApplicationBindingSource1
+            // 
+            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
             // 
             // prodDataGridViewTextBoxColumn
             // 
@@ -183,19 +313,17 @@
             this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
             this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
+            this.prodDataGridViewTextBoxColumn.ReadOnly = true;
             this.prodDataGridViewTextBoxColumn.Width = 150;
             // 
             // giverDataGridViewTextBoxColumn
             // 
+            this.giverDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.giverDataGridViewTextBoxColumn.DataPropertyName = "Giver";
             this.giverDataGridViewTextBoxColumn.HeaderText = "Giver";
             this.giverDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
-            this.giverDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // myApplicationBindingSource1
-            // 
-            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
+            this.giverDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AdminMain
             // 
@@ -203,29 +331,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1123, 680);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonApplications);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdminMain";
             this.Text = "AdminMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMain_FormClosing);
             this.Load += new System.EventHandler(this.AdminMain_Load);
+            this.Shown += new System.EventHandler(this.AdminMain_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1products.ResumeLayout(false);
+            this.tabPage1products.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.tabPageApplications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonApplications;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
@@ -238,8 +369,20 @@
         private System.Windows.Forms.TabPage tabPage1products;
         private System.Windows.Forms.TabPage tabPageApplications;
         private System.Windows.Forms.DataGridView dataGridViewApplics;
+        private System.Windows.Forms.BindingSource myApplicationBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridViewProducts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource myApplicationBindingSource1;
     }
 }

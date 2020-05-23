@@ -1,6 +1,6 @@
-﻿namespace AdminApp
+﻿namespace ClientApp
 {
-    partial class EditionForm
+    partial class ClientVerification
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.buttonSendAppl = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.Description = new System.Windows.Forms.Label();
             this.textBoxProductType = new System.Windows.Forms.TextBox();
             this.ProductType = new System.Windows.Forms.Label();
-            this.textBoxClientName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelClientName = new System.Windows.Forms.Label();
+            this.buttonDecline = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,34 +59,33 @@
             this.textBoxName.Size = new System.Drawing.Size(153, 35);
             this.textBoxName.TabIndex = 1;
             // 
-            // buttonSendAppl
+            // buttonAccept
             // 
-            this.buttonSendAppl.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonSendAppl.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonSendAppl.FlatAppearance.BorderSize = 0;
-            this.buttonSendAppl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSendAppl.Location = new System.Drawing.Point(592, 323);
-            this.buttonSendAppl.Name = "buttonSendAppl";
-            this.buttonSendAppl.Size = new System.Drawing.Size(122, 57);
-            this.buttonSendAppl.TabIndex = 2;
-            this.buttonSendAppl.Text = "Send application";
-            this.buttonSendAppl.UseVisualStyleBackColor = false;
-            this.buttonSendAppl.Click += new System.EventHandler(this.buttonSendAppl_Click);
+            this.buttonAccept.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonAccept.FlatAppearance.BorderSize = 0;
+            this.buttonAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAccept.Location = new System.Drawing.Point(592, 323);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(122, 57);
+            this.buttonAccept.TabIndex = 2;
+            this.buttonAccept.Text = "Accept";
+            this.buttonAccept.UseVisualStyleBackColor = false;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(77, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 57);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonBack.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Location = new System.Drawing.Point(77, 323);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(122, 57);
+            this.buttonBack.TabIndex = 3;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBoxPrice
             // 
@@ -129,7 +126,7 @@
             // textBoxProductType
             // 
             this.textBoxProductType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxProductType.Location = new System.Drawing.Point(114, 178);
+            this.textBoxProductType.Location = new System.Drawing.Point(183, 113);
             this.textBoxProductType.Name = "textBoxProductType";
             this.textBoxProductType.Size = new System.Drawing.Size(153, 35);
             this.textBoxProductType.TabIndex = 19;
@@ -138,63 +135,46 @@
             // 
             this.ProductType.AutoSize = true;
             this.ProductType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ProductType.Location = new System.Drawing.Point(121, 146);
+            this.ProductType.Location = new System.Drawing.Point(190, 81);
             this.ProductType.Name = "ProductType";
             this.ProductType.Size = new System.Drawing.Size(157, 29);
             this.ProductType.TabIndex = 18;
             this.ProductType.Text = "Product Type";
             // 
-            // textBoxClientName
+            // buttonDecline
             // 
-            this.textBoxClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxClientName.Location = new System.Drawing.Point(114, 91);
-            this.textBoxClientName.Name = "textBoxClientName";
-            this.textBoxClientName.Size = new System.Drawing.Size(153, 35);
-            this.textBoxClientName.TabIndex = 21;
+            this.buttonDecline.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonDecline.FlatAppearance.BorderSize = 0;
+            this.buttonDecline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDecline.Location = new System.Drawing.Point(464, 323);
+            this.buttonDecline.Name = "buttonDecline";
+            this.buttonDecline.Size = new System.Drawing.Size(122, 57);
+            this.buttonDecline.TabIndex = 23;
+            this.buttonDecline.Text = "Decline";
+            this.buttonDecline.UseVisualStyleBackColor = false;
+            this.buttonDecline.Click += new System.EventHandler(this.buttonDecline_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(121, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 29);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Client Name";
-            // 
-            // labelClientName
-            // 
-            this.labelClientName.AutoSize = true;
-            this.labelClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelClientName.Location = new System.Drawing.Point(285, 97);
-            this.labelClientName.Name = "labelClientName";
-            this.labelClientName.Size = new System.Drawing.Size(146, 29);
-            this.labelClientName.TabIndex = 22;
-            this.labelClientName.Text = "Client Name";
-            // 
-            // EditionForm
+            // ClientVerification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelClientName);
-            this.Controls.Add(this.textBoxClientName);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.buttonDecline);
             this.Controls.Add(this.textBoxProductType);
             this.Controls.Add(this.ProductType);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonSendAppl);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
-            this.Name = "EditionForm";
+            this.Name = "ClientVerification";
             this.Text = "Edit";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditionForm_FormClosing);
-            this.Load += new System.EventHandler(this.EditionForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientVerification_FormClosing);
+            this.Load += new System.EventHandler(this.ClientVerification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,16 +184,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Button buttonSendAppl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label Description;
         private System.Windows.Forms.TextBox textBoxProductType;
         private System.Windows.Forms.Label ProductType;
-        private System.Windows.Forms.TextBox textBoxClientName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelClientName;
+        private System.Windows.Forms.Button buttonDecline;
     }
 }

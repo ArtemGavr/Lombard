@@ -105,6 +105,7 @@
             this.textBoxPass.PasswordChar = '@';
             this.textBoxPass.Size = new System.Drawing.Size(195, 26);
             this.textBoxPass.TabIndex = 5;
+            this.textBoxPass.Text = "123456";
             this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // pictureBox2
@@ -123,6 +124,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(195, 26);
             this.textBoxLogin.TabIndex = 3;
+            this.textBoxLogin.Text = "Buer1";
             // 
             // buttonClose
             // 
@@ -149,7 +151,6 @@
             this.Login.TabIndex = 0;
             this.Login.Text = "Log In";
             this.Login.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            //this.Login.Click += new System.EventHandler(this.Login_Click);
             this.Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.Login.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
             // 

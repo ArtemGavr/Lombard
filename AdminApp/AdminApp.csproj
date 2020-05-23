@@ -52,12 +52,6 @@
     <Compile Include="AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="AplicsView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AplicsView.Designer.cs">
-      <DependentUpon>AplicsView.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +84,7 @@
     <None Include="Properties\DataSources\AdminMain.datasource" />
     <None Include="Properties\DataSources\Lombard_Project.UserClasses.Lombard.datasource" />
     <None Include="Properties\DataSources\Lombard_Project.UserClasses.MyApplication.datasource" />
+    <None Include="Properties\DataSources\Lombard_Project.UserClasses.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -28,3 +28,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.exe
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.pdb
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicClient.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ClientVerification.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.VerifyView.resources

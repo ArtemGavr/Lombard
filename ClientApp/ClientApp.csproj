@@ -64,6 +64,12 @@
     <Compile Include="ClientMain.Designer.cs">
       <DependentUpon>ClientMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientVerification.Designer.cs">
+      <DependentUpon>ClientVerification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs">
@@ -78,11 +84,20 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerifyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyView.Designer.cs">
+      <DependentUpon>VerifyView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ApplicClient.resx">
       <DependentUpon>ApplicClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientMain.resx">
       <DependentUpon>ClientMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientVerification.resx">
+      <DependentUpon>ClientVerification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +115,11 @@
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerifyView.resx">
+      <DependentUpon>VerifyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Lombard_Project.UserClasses.MyApplication.datasource" />
+    <None Include="Properties\DataSources\Lombard_Project.UserClasses.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -9,7 +9,7 @@ namespace Lombard_Project.UserClasses
     [Serializable]
     public class Property: Product
     {
-        public string Adress { get; set; }
+        public override string Name { get; set; }
         public override int Value { get; set; }
         public override DateTime DateTime { set; get; }
         public override Client Giver { get; set; }
@@ -18,7 +18,7 @@ namespace Lombard_Project.UserClasses
 
         public Property(string adress, int value, Client giver,string descr, DateTime? t = null)
         {
-            Adress = adress;
+            Name = adress;
             Value = value;
             Giver = giver;
             Description = descr;

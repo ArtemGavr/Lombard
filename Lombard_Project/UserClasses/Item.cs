@@ -9,7 +9,7 @@ namespace Lombard_Project.UserClasses
     [Serializable]
     public class Item: Product
     {
-        public string Name { get; set; }
+        public override string Name { get; set; }
         public override int Value { get; set; }
         public override DateTime DateTime {  set; get; }
         public override Client Giver { get; set; }

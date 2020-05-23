@@ -22,11 +22,13 @@ namespace ClientApp
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = user;
+
+            productBindingSource.DataSource = lombard.Products;
         }
 
         private void ClientMain_Load(object sender, EventArgs e)
         {
-
+            productBindingSource.ResetBindings(false);
         }
 
         private void ClientMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -64,6 +66,13 @@ namespace ClientApp
             Form applics = new ApplicClient(ref lombard, activeUser);
             this.Hide();
             applics.Show();
+        }
+
+        private void buttonVerify_Click(object sender, EventArgs e)
+        {
+            Form acceptVies = new VerifyView(ref lombard, activeUser);
+            this.Hide();
+            acceptVies.Show();
         }
     }
 }

@@ -14,38 +14,31 @@ namespace AdminApp
 {
     public partial class EditionForm : Form
     {
-        //Lombard lombard;
-        MyApplication work;
-        int index;
-
-        Lombard lombard;
-        public EditionForm(ref Lombard lombard,MyApplication toedit, int index)
+        public MyApplication work;
+       
+        public EditionForm(MyApplication toedit)
         {
             InitializeComponent();
-            this.lombard = lombard;
             this.work = toedit;
-            this.index = index;
         }
-
-        
 
         private void buttonSendAppl_Click(object sender, EventArgs e)
         {
-            lombard.ApplicationsToAdmin.RemoveAt(index);
-            lombard.ApplicationsToUser.Add(work);
-            lombard.Save();
+            
+
+            //Form AdminMain = System.Windows.Forms.Application.OpenForms[0];
+            //AdminMain.Left = this.Left;
+            //AdminMain.Top = this.Top;
+            //this.Close();
+            //AdminMain.Show();
+
+
         }
 
         private void EditionForm_Load(object sender, EventArgs e)
         {
-            if (work.Prod.Type == "item")
-            {
-                textBoxName.DataBindings.Add(new Binding("Text", work.Prod, "Name"));
-            }
-            else
-            {
-                textBoxName.DataBindings.Add(new Binding("Text", work.Prod, "Adress"));
-            }
+            
+            textBoxName.DataBindings.Add(new Binding("Text", work.Prod, "Name"));
             textBoxPrice.DataBindings.Add(new Binding("Text", work.Prod, "Value"));
             textBoxDescription.DataBindings.Add(new Binding("Text", work.Prod, "Description"));
 
@@ -56,10 +49,12 @@ namespace AdminApp
 
         private void EditionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form AdminMain = System.Windows.Forms.Application.OpenForms[0];
-            AdminMain.Left = this.Left;
-            AdminMain.Top = this.Top;
-            AdminMain.Show();
+            //Form AdminMain = System.Windows.Forms.Application.OpenForms[0];
+            //AdminMain.Left = this.Left;
+            //AdminMain.Top = this.Top;
+            //AdminMain.Show();
+            if (DialogResult != DialogResult.OK)
+                return;
         }
     }
 }
