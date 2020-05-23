@@ -16,6 +16,7 @@ namespace ClientApp
     {
         Lombard lombard;
         Client activeuser;
+        //Product intake;
         //Form papa;
         public ApplicClient(ref Lombard lombard, Client user)
         {
@@ -81,15 +82,28 @@ namespace ClientApp
             {
                 string text = textBoxName.Text;
                 int price = Convert.ToInt32(textBoxPriceDesired.Text);
+                string description = textBoxDescription.Text;
   
 
                 if (radioButtonItemName.Checked == true)
                 {
-
+                    Product intake = new Item( text,  price,  activeuser,  description);
+                    MyApplication applic = new MyApplication((Product)intake, activeuser);
+                    lombard.ApplicationsToAdmin.Add(applic);
+                    // MessageBox.Show(intake.ToString(),"",MessageBoxButtons.OK);
                 }
 
-                //MyApplication applic= new MyApplication (  ,activeUser );
-                // lombard.ApplicationsToAdmin.Add(applic);
+                if (radioButtonProperty.Checked == true)
+                {
+                    Product intake = new Property(text, price, activeuser, description);
+                    MyApplication applic = new MyApplication((Product)intake, activeuser);
+                    lombard.ApplicationsToAdmin.Add(applic);
+                    //MessageBox.Show(intake.ToString(), "", MessageBoxButtons.OK);
+                }
+
+               
+                
+                //MessageBox.Show((lombard.ApplicationsToAdmin[lombard.ApplicationsToAdmin.Count()-1].Prod.ToString()), "", MessageBoxButtons.OK); 
                 MessageBox.Show("Application added succesfully!");
                 lombard.Save();
                 Form CustomerMain = System.Windows.Forms.Application.OpenForms[1];

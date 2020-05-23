@@ -35,6 +35,8 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.radioButtonItemName = new System.Windows.Forms.RadioButton();
             this.radioButtonProperty = new System.Windows.Forms.RadioButton();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.Description = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxPriceDesired
@@ -101,7 +103,6 @@
             this.radioButtonItemName.TabStop = true;
             this.radioButtonItemName.Text = "Item Name";
             this.radioButtonItemName.UseVisualStyleBackColor = true;
-//            this.radioButtonItemName.CheckedChanged += new System.EventHandler(this.radioButtonItemName_CheckedChanged);
             // 
             // radioButtonProperty
             // 
@@ -113,7 +114,24 @@
             this.radioButtonProperty.TabStop = true;
             this.radioButtonProperty.Text = "Property adress";
             this.radioButtonProperty.UseVisualStyleBackColor = true;
-            //this.radioButtonProperty.CheckedChanged += new System.EventHandler(this.radioButtonProperty_CheckedChanged);
+            // 
+            // textBoxDescription
+            // 
+            this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDescription.Location = new System.Drawing.Point(581, 209);
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(153, 35);
+            this.textBoxDescription.TabIndex = 15;
+            // 
+            // Description
+            // 
+            this.Description.AutoSize = true;
+            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Description.Location = new System.Drawing.Point(576, 177);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(135, 29);
+            this.Description.TabIndex = 14;
+            this.Description.Text = "Description";
             // 
             // ApplicClient
             // 
@@ -121,6 +139,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.Description);
             this.Controls.Add(this.radioButtonProperty);
             this.Controls.Add(this.radioButtonItemName);
             this.Controls.Add(this.textBoxPriceDesired);
@@ -146,5 +166,7 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.RadioButton radioButtonItemName;
         private System.Windows.Forms.RadioButton radioButtonProperty;
+        private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.Label Description;
     }
 }

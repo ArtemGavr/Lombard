@@ -13,6 +13,8 @@ namespace Lombard_Project.UserClasses
         public abstract int Value { get; set; }
         public abstract DateTime DateTime { set; get; }
         public abstract Client Giver { get; set; }
+        public abstract string Description { get; set; }
+        public abstract string Type { get; set; }
 
         public Product() { }
     }

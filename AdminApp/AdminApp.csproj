@@ -52,11 +52,17 @@
     <Compile Include="AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicsAdmin.cs">
+    <Compile Include="AplicsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicsAdmin.Designer.cs">
-      <DependentUpon>ApplicsAdmin.cs</DependentUpon>
+    <Compile Include="AplicsView.Designer.cs">
+      <DependentUpon>AplicsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditionForm.Designer.cs">
+      <DependentUpon>EditionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SlotEdition.cs">
       <SubType>Form</SubType>
@@ -69,8 +75,8 @@
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicsAdmin.resx">
-      <DependentUpon>ApplicsAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="EditionForm.resx">
+      <DependentUpon>EditionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\AdminMain.datasource" />
+    <None Include="Properties\DataSources\Lombard_Project.UserClasses.Lombard.datasource" />
+    <None Include="Properties\DataSources\Lombard_Project.UserClasses.MyApplication.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,6 +104,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClientApp\ClientApp.csproj">
+      <Project>{319e45f3-e4f9-4a75-93c9-9a4d5f0428d7}</Project>
+      <Name>ClientApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lombard_Project\Lombard_Project.csproj">
       <Project>{112d73fb-d2ee-4ab9-b82e-e9acc88f2b88}</Project>
       <Name>Lombard_Project</Name>

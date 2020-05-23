@@ -19,16 +19,28 @@ namespace AdminApp
         {
             InitializeComponent();
             lombard = new Lombard();
+            //BindingSource binding = new BindingSource();
+            //binding.DataSource = lombard.ApplicationsToAdmin;
+
+            ////bind datagridview to binding source
+            //ApplicsBindingSource.DataSource = binding;
+            ////adminMainBindingSource.DataSource = lombard.ApplicationsToAdmin;
+
+            myApplicationBindingSource1.DataSource = lombard.ApplicationsToAdmin;
         }
 
         private void AdminMain_Load(object sender, EventArgs e)
         {
             lombard.Load();
+           
+
+            
+            myApplicationBindingSource1.ResetBindings(false);
         }
 
         private void buttonApplications_Click(object sender, EventArgs e)
         {
-            Form aplics = new ApplicsAdmin(ref lombard);
+            Form aplics = new AplicsView(ref lombard);
             this.Hide();
             aplics.Show();
         }
@@ -96,7 +108,15 @@ namespace AdminApp
                     break;
             }
         }
-    
+
+        private void dataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var toedit = dataGridViewApplics.Rows[e.RowIndex].DataBoundItem as MyApplication;
+            Form edit = new EditionForm(ref lombard, toedit, e.RowIndex);
+            this.Hide();
+            edit.Show();
+        }
+
 
 
 

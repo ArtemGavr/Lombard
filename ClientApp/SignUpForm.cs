@@ -25,6 +25,7 @@ namespace ClientApp
         private void SignUpForm_Load(object sender, EventArgs e)
         {
             lombard.Load();
+            lombard.FillTestData(10);
         }
         private void buttonClose_Click(object sender, EventArgs e)
         {

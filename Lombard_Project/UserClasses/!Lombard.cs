@@ -28,11 +28,18 @@ namespace Lombard_Project.UserClasses
 
         public void FillTestData(int n)
         {
+            // Clients
+            Clients.Clear();
+            for (int i = 1; i <= n; i++)
+            {
+                Clients.Add(new Client(i + 10000, $"Buer{i}", "123456"));
+            }
+
             // Products
             Products.Clear();
             for (int i = 0; i < n; i++)
             {
-                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i], DateTime.Now + TimeSpan.FromDays(i))
+                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i],"Sample", DateTime.Now + TimeSpan.FromDays(i))
                 //{
                 //    //Id = i,
                 //    Name = $"Product{i}",
@@ -43,12 +50,7 @@ namespace Lombard_Project.UserClasses
                 );
             }
 
-            // Clients
-            Clients.Clear();
-            for (int i = 1; i <= n; i++)
-            {
-                Clients.Add(new Client(i + 10000, $"Buer{i}", "123"));
-            }
+            
 
             // ApplicationsToAdmin
             ApplicationsToAdmin.Clear();
@@ -63,7 +65,7 @@ namespace Lombard_Project.UserClasses
             //const int m = 3;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add( new MyApplication(Products[i], Clients[i]));
+                ApplicationsToUser.Add( new MyApplication(Products[m-i], Clients[m-1]));
                 //var ps = new List<Portion>();
                 //for (int j = 0; j < m; j++)
                 //{
