@@ -108,8 +108,6 @@ namespace ClientApp
                     // uniwue users
                     if (lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password) != null)
                     {
-                        //MessageBox.Show($"Hello, Dear {login}! We wish you to have a nice day)");
-
                     Form main = new ClientMain(ref lombard, lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password));
                     main.Show();
                     this.Hide();
@@ -125,9 +123,22 @@ namespace ClientApp
             }
         }
 
-        //private void Login_Click(object sender, EventArgs e)
-        //{
+        private void SignUpForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //MessageBox.Show("enter");
+                buttonLogin_Click(sender, e);
+            }
+            
+        }
 
-        //}
+        private void textBoxLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (!char.IsNumber(e.KeyValue) && (e.KeyChar != 32) && (e.KeyChar != 8) && !char.IsControl(e.KeyChar))
+            //{
+            //    e.Handled = true;
+            //}
+        }
     }
 }

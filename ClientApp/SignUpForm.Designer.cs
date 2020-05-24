@@ -93,7 +93,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(183, 250);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(131, 43);
-            this.buttonLogin.TabIndex = 6;
+            this.buttonLogin.TabIndex = 0;
             this.buttonLogin.Text = "LogIn";
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -125,6 +125,7 @@
             this.textBoxLogin.Size = new System.Drawing.Size(195, 26);
             this.textBoxLogin.TabIndex = 3;
             this.textBoxLogin.Text = "Buer1";
+            this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyDown);
             // 
             // buttonClose
             // 
@@ -161,9 +162,12 @@
             this.ClientSize = new System.Drawing.Size(511, 395);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "SignUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpForm";
             this.Load += new System.EventHandler(this.SignUpForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SignUpForm_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

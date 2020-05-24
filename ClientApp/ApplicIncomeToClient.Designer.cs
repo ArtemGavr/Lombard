@@ -1,6 +1,6 @@
 ﻿namespace ClientApp
 {
-    partial class VerifyView
+    partial class ApplicIncomeToClient
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonBack = new System.Windows.Forms.Button();
             this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +41,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -50,12 +51,31 @@
             this.dataGridView1.DataSource = this.myApplicationBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(-2, 1);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(488, 388);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // prodDataGridViewTextBoxColumn
+            // 
+            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
+            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
+            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
+            this.prodDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prodDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // clientNameDataGridViewTextBoxColumn
+            // 
+            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.HeaderText = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
+            this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // myApplicationBindingSource
             // 
@@ -76,24 +96,7 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // prodDataGridViewTextBoxColumn
-            // 
-            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
-            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
-            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
-            this.prodDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // clientNameDataGridViewTextBoxColumn
-            // 
-            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "ClientName";
-            this.clientNameDataGridViewTextBoxColumn.HeaderText = "ClientName";
-            this.clientNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
-            this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clientNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // VerifyView
+            // ApplicIncomeToClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +104,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "VerifyView";
+            this.Name = "ApplicIncomeToClient";
             this.Text = "VerifyView";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VerifyView_FormClosing);
             this.Load += new System.EventHandler(this.VerifyView_Load);

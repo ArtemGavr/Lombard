@@ -1,6 +1,6 @@
 ﻿namespace ClientApp
 {
-    partial class ApplicClient
+    partial class ApplicMakeClient
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,10 @@
             this.radioButtonProperty = new System.Windows.Forms.RadioButton();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.Description = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPriceDesired
@@ -133,12 +137,39 @@
             this.Description.TabIndex = 14;
             this.Description.Text = "Description";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(271, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 29);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Image";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox.Location = new System.Drawing.Point(252, 190);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(232, 159);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 31;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ApplicClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.radioButtonProperty);
@@ -152,6 +183,7 @@
             this.Text = "Applic";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicClient_FormClosing);
             this.Load += new System.EventHandler(this.Applic_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +200,8 @@
         private System.Windows.Forms.RadioButton radioButtonProperty;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label Description;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

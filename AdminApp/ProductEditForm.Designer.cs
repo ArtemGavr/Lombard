@@ -1,6 +1,6 @@
 ﻿namespace AdminApp
 {
-    partial class ProductForm
+    partial class ProductEditForm
     {
         /// <summary>
         /// Required designer variable.

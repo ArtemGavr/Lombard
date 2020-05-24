@@ -32,14 +32,14 @@
             this.buttonApplications = new System.Windows.Forms.Button();
             this.buttonVerify = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giverNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -73,17 +73,22 @@
             this.nameDataGridViewTextBoxColumn,
             this.valueDataGridViewTextBoxColumn,
             this.dateTimeDataGridViewTextBoxColumn,
-            this.giverDataGridViewTextBoxColumn,
+            this.giverNameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn,
             this.imageDataGridViewImageColumn});
             this.dataGridView1.DataSource = this.productBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(1, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1094, 436);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -91,6 +96,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 150;
             // 
             // valueDataGridViewTextBoxColumn
@@ -99,6 +105,7 @@
             this.valueDataGridViewTextBoxColumn.HeaderText = "Value";
             this.valueDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
+            this.valueDataGridViewTextBoxColumn.ReadOnly = true;
             this.valueDataGridViewTextBoxColumn.Width = 150;
             // 
             // dateTimeDataGridViewTextBoxColumn
@@ -107,15 +114,17 @@
             this.dateTimeDataGridViewTextBoxColumn.HeaderText = "DateTime";
             this.dateTimeDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.dateTimeDataGridViewTextBoxColumn.Name = "dateTimeDataGridViewTextBoxColumn";
+            this.dateTimeDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateTimeDataGridViewTextBoxColumn.Width = 150;
             // 
-            // giverDataGridViewTextBoxColumn
+            // giverNameDataGridViewTextBoxColumn
             // 
-            this.giverDataGridViewTextBoxColumn.DataPropertyName = "Giver";
-            this.giverDataGridViewTextBoxColumn.HeaderText = "Giver";
-            this.giverDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
-            this.giverDataGridViewTextBoxColumn.Width = 150;
+            this.giverNameDataGridViewTextBoxColumn.DataPropertyName = "GiverName";
+            this.giverNameDataGridViewTextBoxColumn.HeaderText = "GiverName";
+            this.giverNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.giverNameDataGridViewTextBoxColumn.Name = "giverNameDataGridViewTextBoxColumn";
+            this.giverNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giverNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -123,6 +132,7 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionDataGridViewTextBoxColumn.Width = 150;
             // 
             // typeDataGridViewTextBoxColumn
@@ -131,21 +141,18 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             this.typeDataGridViewTextBoxColumn.Width = 150;
             // 
             // imageDataGridViewImageColumn
             // 
             this.imageDataGridViewImageColumn.DataPropertyName = "Image";
             this.imageDataGridViewImageColumn.HeaderText = "Image";
-            this.imageDataGridViewImageColumn.Image = global::ClientApp.Properties.Resources.rose;
             this.imageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.imageDataGridViewImageColumn.MinimumWidth = 8;
             this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
             this.imageDataGridViewImageColumn.Width = 150;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
             // ClientMain
             // 
@@ -176,7 +183,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giverNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;

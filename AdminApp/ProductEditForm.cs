@@ -5,13 +5,17 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
-    public partial class ProductForm : Form
+    public partial class ProductEditForm : Form
     {
         public Product prod;
 
-        public ProductForm(Product toedit)
+        public ProductEditForm() 
         {
             InitializeComponent();
+        }
+        public ProductEditForm(Product toedit) :this()
+        {
+            
             this.prod = toedit;
         }
 

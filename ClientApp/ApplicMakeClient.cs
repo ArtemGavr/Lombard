@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace ClientApp
 {
-    public partial class ApplicClient : Form
+    public partial class ApplicMakeClient : Form
     {
         private Lombard lombard;
         private Client activeuser;
 
         //Product intake;
         //Form papa;
-        public ApplicClient(ref Lombard lombard, Client user)
+        public ApplicMakeClient(ref Lombard lombard, Client user)
         {
             InitializeComponent();
             this.lombard = lombard;
@@ -78,7 +78,7 @@ namespace ClientApp
                 int price = Convert.ToInt32(textBoxPriceDesired.Text);
                 string description = textBoxDescription.Text;
 
-                var noImage = new Bitmap(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"ClientApp\Images\rose.png"));
+                 Image noImage = pictureBox.Image;
 
                 if (radioButtonItemName.Checked == true)
                 {
@@ -115,5 +115,16 @@ namespace ClientApp
             CustomerMain.Top = this.Top;
             CustomerMain.Show();
         }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image = new Bitmap(openFileDialog1.FileName);
+                 
+            }
+        }
+
+       
     }
 }

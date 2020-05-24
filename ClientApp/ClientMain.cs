@@ -56,7 +56,7 @@ namespace ClientApp
 
         private void buttonApplications_Click(object sender, EventArgs e)
         {
-            Form applics = new ApplicClient(ref lombard, activeUser);
+            Form applics = new ApplicMakeClient(ref lombard, activeUser);
             this.Hide();
             applics.Show();
            
@@ -64,7 +64,7 @@ namespace ClientApp
 
         private void buttonVerify_Click(object sender, EventArgs e)
         {
-            Form acceptVies = new VerifyView(ref lombard, activeUser);
+            Form acceptVies = new ApplicIncomeToClient(ref lombard, activeUser);
             this.Hide();
             
             acceptVies.Show();

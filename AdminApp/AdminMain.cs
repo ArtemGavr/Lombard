@@ -65,13 +65,16 @@ namespace AdminApp
         private void dataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var toedit = dataGridViewApplics.Rows[e.RowIndex].DataBoundItem as MyApplication;
-            var edit = new EditionForm(toedit);
-            if (edit.ShowDialog() == DialogResult.OK)
+            if (toedit != null)
             {
-                lombard.ApplicationsToAdmin.Remove(edit.work);///
-                lombard.ApplicationsToUser.Add(edit.work);
-                lombard.Save();
-                myApplicationBindingSource1.ResetBindings(false);
+                var edit = new ApplicEditionAdmin(toedit);
+                if (edit.ShowDialog() == DialogResult.OK)
+                {
+                    lombard.ApplicationsToAdmin.Remove(edit.work);///
+                    lombard.ApplicationsToUser.Add(edit.work);
+                    lombard.Save();
+                    myApplicationBindingSource1.ResetBindings(false);
+                }
             }
         }
 
@@ -94,9 +97,25 @@ namespace AdminApp
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var toEdit = dataGridViewProducts.SelectedRows[0].DataBoundItem as Product;
-            var pf = new ProductForm(toEdit);
-            if (pf.ShowDialog() == DialogResult.OK)
+            int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            for (int i = 0; i < selectedRowCount; i++)
+            {
+                var toEdit = dataGridViewProducts.SelectedRows[0].DataBoundItem as Product;
+                var pf = new ProductEditForm(toEdit);
+                if (pf.ShowDialog() == DialogResult.OK)
+                {
+                    productBindingSource.ResetBindings(false);
+                    lombard.IsDirty = true;
+                }
+            }
+            
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            var adding = new ProductAddForm(ref lombard);
+            if (adding.ShowDialog() == DialogResult.OK)
             {
                 productBindingSource.ResetBindings(false);
                 lombard.IsDirty = true;
