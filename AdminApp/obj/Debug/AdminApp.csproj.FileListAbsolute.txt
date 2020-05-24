@@ -17,3 +17,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ProductAddForm.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ProductEditForm.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ApplicEditionAdmin.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\bin\Debug\AdminApp.exe.CodeAnalysisLog.xml
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\bin\Debug\AdminApp.exe.lastcodeanalysissucceeded
