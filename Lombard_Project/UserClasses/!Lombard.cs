@@ -39,7 +39,7 @@ namespace Lombard_Project.UserClasses
 
             for (int i = 0; i < n; i++)
             {
-                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i))
+                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[0], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i))
                 //{
                 //    //Id = i,
                 //    Name = $"Product{i}",
@@ -55,7 +55,7 @@ namespace Lombard_Project.UserClasses
             const int m = 3;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[i]));
+                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[0]));
             }
 
             // ApplicationsToUser
@@ -63,7 +63,7 @@ namespace Lombard_Project.UserClasses
             //const int m = 3;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add(new MyApplication(Products[m - i], Clients[m - 1]));
+                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[0]));
                 //var ps = new List<Portion>();
                 //for (int j = 0; j < m; j++)
                 //{

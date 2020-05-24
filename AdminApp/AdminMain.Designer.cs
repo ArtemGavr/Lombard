@@ -40,16 +40,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1products = new System.Windows.Forms.TabPage();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPageApplications = new System.Windows.Forms.TabPage();
-            this.dataGridViewApplics = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,14 +47,24 @@
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPageApplications = new System.Windows.Forms.TabPage();
+            this.dataGridViewApplics = new System.Windows.Forms.DataGridView();
+            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1products.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.tabPageApplications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplics)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@
             // 
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem,
@@ -184,95 +185,6 @@
             this.dataGridViewProducts.Size = new System.Drawing.Size(963, 572);
             this.dataGridViewProducts.TabIndex = 4;
             // 
-            // menuStrip2
-            // 
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(973, 36);
-            this.menuStrip2.TabIndex = 5;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 32);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(78, 32);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // tabPageApplications
-            // 
-            this.tabPageApplications.Controls.Add(this.dataGridViewApplics);
-            this.tabPageApplications.Location = new System.Drawing.Point(4, 29);
-            this.tabPageApplications.Name = "tabPageApplications";
-            this.tabPageApplications.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageApplications.Size = new System.Drawing.Size(979, 647);
-            this.tabPageApplications.TabIndex = 1;
-            this.tabPageApplications.Text = "Applications";
-            this.tabPageApplications.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewApplics
-            // 
-            this.dataGridViewApplics.AllowUserToAddRows = false;
-            this.dataGridViewApplics.AutoGenerateColumns = false;
-            this.dataGridViewApplics.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridViewApplics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewApplics.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.prodDataGridViewTextBoxColumn,
-            this.giverDataGridViewTextBoxColumn});
-            this.dataGridViewApplics.DataSource = this.myApplicationBindingSource1;
-            this.dataGridViewApplics.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewApplics.Name = "dataGridViewApplics";
-            this.dataGridViewApplics.ReadOnly = true;
-            this.dataGridViewApplics.RowHeadersWidth = 62;
-            this.dataGridViewApplics.RowTemplate.Height = 28;
-            this.dataGridViewApplics.Size = new System.Drawing.Size(502, 605);
-            this.dataGridViewApplics.TabIndex = 0;
-            this.dataGridViewApplics.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewApplics_CellContentDoubleClick);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
-            // 
-            // prodDataGridViewTextBoxColumn
-            // 
-            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
-            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
-            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
-            this.prodDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prodDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // giverDataGridViewTextBoxColumn
-            // 
-            this.giverDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.giverDataGridViewTextBoxColumn.DataPropertyName = "Giver";
-            this.giverDataGridViewTextBoxColumn.HeaderText = "Giver";
-            this.giverDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
-            this.giverDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // myApplicationBindingSource1
-            // 
-            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -337,6 +249,97 @@
             this.dateTimeDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateTimeDataGridViewTextBoxColumn.Width = 150;
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(973, 33);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(62, 29);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // tabPageApplications
+            // 
+            this.tabPageApplications.Controls.Add(this.dataGridViewApplics);
+            this.tabPageApplications.Location = new System.Drawing.Point(4, 29);
+            this.tabPageApplications.Name = "tabPageApplications";
+            this.tabPageApplications.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageApplications.Size = new System.Drawing.Size(979, 647);
+            this.tabPageApplications.TabIndex = 1;
+            this.tabPageApplications.Text = "Applications";
+            this.tabPageApplications.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewApplics
+            // 
+            this.dataGridViewApplics.AllowUserToAddRows = false;
+            this.dataGridViewApplics.AutoGenerateColumns = false;
+            this.dataGridViewApplics.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewApplics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewApplics.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prodDataGridViewTextBoxColumn,
+            this.clientNameDataGridViewTextBoxColumn});
+            this.dataGridViewApplics.DataSource = this.myApplicationBindingSource1;
+            this.dataGridViewApplics.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewApplics.Name = "dataGridViewApplics";
+            this.dataGridViewApplics.ReadOnly = true;
+            this.dataGridViewApplics.RowHeadersWidth = 62;
+            this.dataGridViewApplics.RowTemplate.Height = 28;
+            this.dataGridViewApplics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewApplics.Size = new System.Drawing.Size(502, 605);
+            this.dataGridViewApplics.TabIndex = 0;
+            this.dataGridViewApplics.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewApplics_CellContentDoubleClick);
+            // 
+            // myApplicationBindingSource1
+            // 
+            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
+            // 
+            // prodDataGridViewTextBoxColumn
+            // 
+            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
+            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
+            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
+            this.prodDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prodDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // clientNameDataGridViewTextBoxColumn
+            // 
+            this.clientNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.HeaderText = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
+            this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -357,11 +360,11 @@
             this.tabPage1products.ResumeLayout(false);
             this.tabPage1products.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.tabPageApplications.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewApplics)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -387,8 +390,6 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
@@ -396,5 +397,7 @@
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
     }
 }

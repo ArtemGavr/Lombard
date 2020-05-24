@@ -13,11 +13,15 @@ namespace Lombard_Project.UserClasses
         public Product Prod { set; get; }
         public Client Giver { set; get; }
 
+        public string ClientName { get { return Giver.Name; }  }
+
         public MyApplication(Product prod, Client clie)
         {
             Prod = prod;
             Giver = clie;
         }
+
+        
 
     }
 }

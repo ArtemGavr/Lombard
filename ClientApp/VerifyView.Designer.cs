@@ -30,22 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonBack = new System.Windows.Forms.Button();
+            this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prodDataGridViewTextBoxColumn,
-            this.giverDataGridViewTextBoxColumn});
+            this.clientNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.myApplicationBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(-2, 1);
             this.dataGridView1.Name = "dataGridView1";
@@ -55,22 +56,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // prodDataGridViewTextBoxColumn
-            // 
-            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
-            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
-            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
-            this.prodDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // giverDataGridViewTextBoxColumn
-            // 
-            this.giverDataGridViewTextBoxColumn.DataPropertyName = "Giver";
-            this.giverDataGridViewTextBoxColumn.HeaderText = "Giver";
-            this.giverDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
-            this.giverDataGridViewTextBoxColumn.Width = 150;
             // 
             // myApplicationBindingSource
             // 
@@ -90,6 +75,23 @@
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // prodDataGridViewTextBoxColumn
+            // 
+            this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
+            this.prodDataGridViewTextBoxColumn.HeaderText = "Prod";
+            this.prodDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.prodDataGridViewTextBoxColumn.Name = "prodDataGridViewTextBoxColumn";
+            this.prodDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // clientNameDataGridViewTextBoxColumn
+            // 
+            this.clientNameDataGridViewTextBoxColumn.DataPropertyName = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.HeaderText = "ClientName";
+            this.clientNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.clientNameDataGridViewTextBoxColumn.Name = "clientNameDataGridViewTextBoxColumn";
+            this.clientNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.clientNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // VerifyView
             // 
@@ -112,9 +114,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource myApplicationBindingSource;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
     }
 }

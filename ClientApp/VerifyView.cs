@@ -49,10 +49,11 @@ namespace ClientApp
             if (res == DialogResult.Yes)
             {
                 lombard.ApplicationsToUser.Remove(accept.work);
-
                 Product prod = accept.work.Prod;
                 prod.DateTime = DateTime.Now;
                 lombard.Products.Add(prod);
+
+                myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
                 myApplicationBindingSource.ResetBindings(false);
                 MessageBox.Show("You accepted the lombard offer", "accept", MessageBoxButtons.OK);
                 lombard.Save();
@@ -60,6 +61,7 @@ namespace ClientApp
             if (res == DialogResult.No)
             {
                 lombard.ApplicationsToUser.Remove(accept.work);
+                myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
                 myApplicationBindingSource.ResetBindings(false);
                 MessageBox.Show("You declined the lombard offer", "Decline", MessageBoxButtons.OK);
                 lombard.Save();

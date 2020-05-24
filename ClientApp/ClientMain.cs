@@ -15,7 +15,6 @@ namespace ClientApp
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = user;
-
             productBindingSource.DataSource = lombard.Products;
         }
 
@@ -60,13 +59,20 @@ namespace ClientApp
             Form applics = new ApplicClient(ref lombard, activeUser);
             this.Hide();
             applics.Show();
+           
         }
 
         private void buttonVerify_Click(object sender, EventArgs e)
         {
             Form acceptVies = new VerifyView(ref lombard, activeUser);
             this.Hide();
+            
             acceptVies.Show();
+        }
+
+        private void ClientMain_VisibleChanged(object sender, EventArgs e)
+        {
+            productBindingSource.ResetBindings(false);
         }
     }
 }
