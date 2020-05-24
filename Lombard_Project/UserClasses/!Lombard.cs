@@ -43,12 +43,11 @@ namespace Lombard_Project.UserClasses
             {
                 if (i % 2 == 0) 
                 {
-                    Products.Add((Product)new Item($"Item{i}", i * 10, Clients[i], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i)));
+                    Products.Add((Product)new Item($"Item{i}", 10+i * 10, Clients[0], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i+16)));
                 }
                 else
                 {
-                    Products.Add((Product)new Property($"Property{i}", i * 10, Clients[i], "Sample", DateTime.Now + TimeSpan.FromDays(i)) { Image= noImage });
-
+                    Products.Add((Product)new Property($"Property{i}", 10+i * 10, Clients[0], "Sample", DateTime.Now - TimeSpan.FromDays(i+16)) { Image= noImage });
                 }
                 
             }
@@ -58,7 +57,7 @@ namespace Lombard_Project.UserClasses
             const int m = 5;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[i%2]));
+                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[0]));
             }
 
             // ApplicationsToUser
@@ -66,7 +65,7 @@ namespace Lombard_Project.UserClasses
           
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[i%2]));
+                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[0]));
                 
             }
         }
@@ -79,6 +78,15 @@ namespace Lombard_Project.UserClasses
         public void Load()
         {
             new FilesWork(this).Load();
+
+            for (int i = 0; i < Products.Count; i++)
+            {
+                int days = Convert.ToInt32((DateTime.Now - Products[i].DateTime).TotalDays);
+                if (days>20)
+                    Products[i].Price =Convert.ToInt32( 1.2* Products[i].Value);
+                else
+                    Products[i].Price = Convert.ToInt32((1+(days*0.01)) * Products[i].Value);
+            }
         }
     }
 }

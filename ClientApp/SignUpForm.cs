@@ -25,6 +25,8 @@ namespace ClientApp
         private void SignUpForm_Load(object sender, EventArgs e)
         {
             lombard.Load();
+            lombard.FillTestData(10); //lombard.Save(); lombard.Load();
+            
             //lombard.FillTestData(15);
         }
         private void buttonClose_Click(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace ClientApp
                 string login = textBoxLogin.Text;
                 string password = (textBoxPass.Text);
                     // uniwue users
-                    if (lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password) != null)
+                    if (lombard.Clients.FirstOrDefault(u => u.Name.ToLower() == login.ToLower() && u.Password == password) != null)
                     {
                     Form main = new ClientMain(ref lombard, lombard.Clients.FirstOrDefault(u => u.Name == login && u.Password == password));
                     main.Show();

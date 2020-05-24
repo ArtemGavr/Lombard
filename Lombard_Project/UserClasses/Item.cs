@@ -14,6 +14,7 @@ namespace Lombard_Project.UserClasses
         public override string Type { get; set; }
         public override Image Image { get; set; }
         public override string GiverName { get => Giver.Name;  }
+        public override int Price { set; get; }
 
         public Item(string name, int value, Client giver, string descript, Image image, DateTime? t = null)
         {
@@ -33,9 +34,6 @@ namespace Lombard_Project.UserClasses
         {
         }
 
-        public override string ToString()
-        {
-            return "item";
-        }
+      
     }
 }

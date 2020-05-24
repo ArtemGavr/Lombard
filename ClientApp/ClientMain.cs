@@ -1,5 +1,8 @@
 ﻿using Lombard_Project.UserClasses;
 using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace ClientApp
@@ -10,12 +13,20 @@ namespace ClientApp
 
         private Client activeUser;
 
+        List<Product> presentList;
+
         public ClientMain(ref Lombard lombard, Client user)
         {
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = user;
-            productBindingSource.DataSource = lombard.Products;
+            presentList = new List<Product>();
+            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
+            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
+            productBindingSource.DataSource = presentList;
+            //productBindingSource.DataSource 
+            //    = lombard.Products.Where(o => o.Giver == activeUser && (Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20))
+            //    .Concat(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
         }
 
         private void ClientMain_Load(object sender, EventArgs e)
@@ -72,7 +83,11 @@ namespace ClientApp
 
         private void ClientMain_VisibleChanged(object sender, EventArgs e)
         {
+            presentList.Clear();
+            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
+            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
             productBindingSource.ResetBindings(false);
+
         }
 
         private void buttonPurchase_Click(object sender, EventArgs e)
@@ -95,9 +110,14 @@ namespace ClientApp
                     activeUser.PurchasedGoods.Add(cart.LikedProducts[i]);
                 }
                 lombard.Clients.Find(o => o.ID == activeUser.ID).PurchasedGoods = activeUser.PurchasedGoods;
+
+                presentList.Clear();
+                presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
+                presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
                 productBindingSource.ResetBindings(false);
                 lombard.IsDirty = true;
             }
+            
         }
     }
 }

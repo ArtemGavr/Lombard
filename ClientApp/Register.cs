@@ -78,7 +78,7 @@ namespace ClientApp
                 string password = (RegPassword.Text);
                 int iD = Convert.ToInt32(IDbox.Text);
                 // unique users
-                if (lombard.Clients.FirstOrDefault(u => u.Name == login && u.ID == iD) != null)
+                if (lombard.Clients.FirstOrDefault(u => u.Name.ToLower() == login.ToLower() && u.ID == iD) != null)
                 {
                     MessageBox.Show("Sorry, such Client already exist...Change your login");
                     RegName.Text = string.Empty;
