@@ -25,7 +25,7 @@ namespace ClientApp
         private void SignUpForm_Load(object sender, EventArgs e)
         {
             lombard.Load();
-            //lombard.FillTestData(10);
+            //lombard.FillTestData(15);
         }
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -135,7 +135,7 @@ namespace ClientApp
 
         private void textBoxLogin_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyValue) && (e.KeyChar != 32) && (e.KeyChar != 8) && !char.IsControl(e.KeyChar))
+            //if (!char.IsNumber(e.KeyData.ToString()[0])  && (Convert.ToInt32(e.KeyCode.ToString()) != 8) && !char.IsControl(e.KeyData.ToString()[0]))
             //{
             //    e.Handled = true;
             //}

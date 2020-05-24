@@ -70,7 +70,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.Location = new System.Drawing.Point(270, 199);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(262, 179);

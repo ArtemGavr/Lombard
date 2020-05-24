@@ -13,6 +13,7 @@ namespace Lombard_Project.UserClasses
         public override string Name { get; set; }
 
         public string Password { get; set; }
+        public List<Product> PurchasedGoods {set; get; }
 
         public Client(int id, string name,  string pass)
         {
@@ -20,6 +21,7 @@ namespace Lombard_Project.UserClasses
             Name = name;
             //Login = log;
             Password = pass;
+            PurchasedGoods = new List<Product>();
         }
     }
 }

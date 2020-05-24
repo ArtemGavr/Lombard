@@ -11,13 +11,11 @@ namespace Lombard_Project.FilesWorkk
         private Lombard lombard;
         private const string fileName = "lombard.bin";
 
-        // string patth = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
         private string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp\bin\Debug\");
 
         public FilesWork(Lombard lombard)
         {
             this.lombard = lombard;
-            // Console.WriteLine(path);
         }
 
         public void Save()
@@ -34,12 +32,13 @@ namespace Lombard_Project.FilesWorkk
             using (Stream stream = File.OpenRead(path + fileName))
             {
                 var serializer = new BinaryFormatter();
-                Lombard st = (Lombard)serializer.Deserialize(stream);
+                Lombard lmd = (Lombard)serializer.Deserialize(stream);
 
-                Copy(st.Products, lombard.Products);
-                Copy(st.Clients, lombard.Clients);
-                Copy(st.ApplicationsToAdmin, lombard.ApplicationsToAdmin);
-                Copy(st.ApplicationsToUser, lombard.ApplicationsToUser);
+                Copy(lmd.Products, lombard.Products);
+                Copy(lmd.Clients, lombard.Clients);
+                Copy(lmd.ApplicationsToAdmin, lombard.ApplicationsToAdmin);
+                Copy(lmd.ApplicationsToUser, lombard.ApplicationsToUser);
+          
             }
 
             void Copy<T>(List<T> from, List<T> to)

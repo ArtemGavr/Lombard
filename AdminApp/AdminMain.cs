@@ -75,6 +75,7 @@ namespace AdminApp
                     lombard.Save();
                     myApplicationBindingSource1.ResetBindings(false);
                 }
+                myApplicationBindingSource1.ResetBindings(false);
             }
         }
 

@@ -58,6 +58,12 @@
     <Compile Include="Buying.Designer.cs">
       <DependentUpon>Buying.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing.Designer.cs">
+      <DependentUpon>Purchasing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="ApplicMakeClient.resx">
       <DependentUpon>ApplicMakeClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing.resx">
+      <DependentUpon>Purchasing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientMain.resx">
       <DependentUpon>ClientMain.cs</DependentUpon>

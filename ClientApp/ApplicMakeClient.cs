@@ -90,7 +90,7 @@ namespace ClientApp
 
                 if (radioButtonProperty.Checked == true)
                 {
-                    Product intake = new Property(text, price, activeuser, description);
+                    Product intake = new Property(text, price, activeuser, description) { Image = noImage};
                     MyApplication applic = new MyApplication((Product)intake, activeuser);
                     lombard.ApplicationsToAdmin.Add(applic);
                     //MessageBox.Show(intake.ToString(), "", MessageBoxButtons.OK);

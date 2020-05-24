@@ -15,6 +15,7 @@ namespace Lombard_Project.UserClasses
         public List<MyApplication> ApplicationsToUser { private set; get; }
 
         public bool IsDirty = false;
+        
 
         public Lombard()
         {
@@ -22,6 +23,7 @@ namespace Lombard_Project.UserClasses
             Clients = new List<Client>();
             ApplicationsToAdmin = new List<MyApplication>();
             ApplicationsToUser = new List<MyApplication>();
+            
         }
 
         public void FillTestData(int n)
@@ -30,7 +32,7 @@ namespace Lombard_Project.UserClasses
             Clients.Clear();
             for (int i = 1; i <= n; i++)
             {
-                Clients.Add(new Client(i + 10000, $"Buer{i}", "123456"));
+                Clients.Add(new Client(i + 10000, $"Client{i}", "12345"));
             }
 
             // Products
@@ -39,37 +41,33 @@ namespace Lombard_Project.UserClasses
 
             for (int i = 0; i < n; i++)
             {
-                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[0], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i))
-                //{
-                //    //Id = i,
-                //    Name = $"Product{i}",
-                //    Value = i * 10,
-                //    Giver = Clients[i]
+                if (i % 2 == 0) 
+                {
+                    Products.Add((Product)new Item($"Item{i}", i * 10, Clients[i], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i)));
+                }
+                else
+                {
+                    Products.Add((Product)new Property($"Property{i}", i * 10, Clients[i], "Sample", DateTime.Now + TimeSpan.FromDays(i)) { Image= noImage });
 
-                //}
-                );
+                }
+                
             }
 
             // ApplicationsToAdmin
             ApplicationsToAdmin.Clear();
-            const int m = 3;
+            const int m = 5;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[0]));
+                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[i%2]));
             }
 
             // ApplicationsToUser
             ApplicationsToUser.Clear();
-            //const int m = 3;
+          
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[0]));
-                //var ps = new List<Portion>();
-                //for (int j = 0; j < m; j++)
-                //{
-                //    ps.Add(new Portion { Product = Products[i + j], Amount = j });
-                //}
-                //Orders.Add(new Order(ps, Buyers[i], DateTime.Now + TimeSpan.FromDays(i)));
+                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[i%2]));
+                
             }
         }
 

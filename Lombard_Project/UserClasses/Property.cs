@@ -15,9 +15,9 @@ namespace Lombard_Project.UserClasses
         public override Image Image { get; set; }
         public override string GiverName { get => Giver.Name; }
 
-        public Property(string adress, int value, Client giver, string descr, DateTime? t = null)
+        public Property(string name, int value, Client giver, string descr, DateTime? t = null)
         {
-            Name = adress;
+            Name = name;
             Value = value;
             Giver = giver;
             Description = descr;

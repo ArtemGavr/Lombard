@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 395);
+            this.panel1.Size = new System.Drawing.Size(495, 644);
             this.panel1.TabIndex = 0;
             // 
             // buttonRegister
@@ -64,10 +64,10 @@
             this.buttonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRegister.FlatAppearance.BorderSize = 0;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRegister.Font = new System.Drawing.Font("Britannic Bold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegister.Location = new System.Drawing.Point(183, 328);
+            this.buttonRegister.Font = new System.Drawing.Font("Britannic Bold", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegister.Location = new System.Drawing.Point(155, 525);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(129, 46);
+            this.buttonRegister.Size = new System.Drawing.Size(211, 107);
             this.buttonRegister.TabIndex = 8;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ClientApp.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 67);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(136, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -90,9 +90,10 @@
             this.buttonLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonLogin.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.InactiveBorder;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogin.Location = new System.Drawing.Point(183, 250);
+            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLogin.Location = new System.Drawing.Point(155, 415);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(131, 43);
+            this.buttonLogin.Size = new System.Drawing.Size(213, 104);
             this.buttonLogin.TabIndex = 0;
             this.buttonLogin.Text = "LogIn";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -100,31 +101,33 @@
             // 
             // textBoxPass
             // 
-            this.textBoxPass.Location = new System.Drawing.Point(82, 163);
+            this.textBoxPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPass.Location = new System.Drawing.Point(179, 252);
             this.textBoxPass.Name = "textBoxPass";
             this.textBoxPass.PasswordChar = '@';
-            this.textBoxPass.Size = new System.Drawing.Size(195, 26);
+            this.textBoxPass.Size = new System.Drawing.Size(293, 53);
             this.textBoxPass.TabIndex = 5;
-            this.textBoxPass.Text = "123456";
+            this.textBoxPass.Text = "12345";
             this.textBoxPass.UseSystemPasswordChar = true;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ClientApp.Properties.Resources.key;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 145);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 252);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.Size = new System.Drawing.Size(136, 119);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(82, 75);
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(179, 109);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(195, 26);
+            this.textBoxLogin.Size = new System.Drawing.Size(293, 53);
             this.textBoxLogin.TabIndex = 3;
-            this.textBoxLogin.Text = "Buer1";
+            this.textBoxLogin.Text = "Client1";
             this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyDown);
             // 
             // buttonClose
@@ -132,7 +135,7 @@
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonClose.Location = new System.Drawing.Point(458, 0);
+            this.buttonClose.Location = new System.Drawing.Point(442, 0);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(53, 45);
             this.buttonClose.TabIndex = 1;
@@ -145,10 +148,10 @@
             // Login
             // 
             this.Login.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Login.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.Font = new System.Drawing.Font("Arial Rounded MT Bold", 22F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login.Location = new System.Drawing.Point(0, 0);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(511, 395);
+            this.Login.Size = new System.Drawing.Size(495, 64);
             this.Login.TabIndex = 0;
             this.Login.Text = "Log In";
             this.Login.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,7 +162,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 395);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(495, 644);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;

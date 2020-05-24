@@ -70,11 +70,11 @@
             this.buttonSendAppl.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSendAppl.FlatAppearance.BorderSize = 0;
             this.buttonSendAppl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSendAppl.Location = new System.Drawing.Point(592, 323);
+            this.buttonSendAppl.Location = new System.Drawing.Point(601, 362);
             this.buttonSendAppl.Name = "buttonSendAppl";
-            this.buttonSendAppl.Size = new System.Drawing.Size(122, 57);
+            this.buttonSendAppl.Size = new System.Drawing.Size(187, 76);
             this.buttonSendAppl.TabIndex = 2;
-            this.buttonSendAppl.Text = "Send application";
+            this.buttonSendAppl.Text = "Send application to client";
             this.buttonSendAppl.UseVisualStyleBackColor = false;
             this.buttonSendAppl.Click += new System.EventHandler(this.buttonSendAppl_Click);
             // 
@@ -186,7 +186,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.Location = new System.Drawing.Point(183, 145);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(232, 159);
@@ -199,7 +199,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // EditionForm
+            // ApplicEditionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
-            this.Name = "EditionForm";
+            this.Name = "ApplicEditionAdmin";
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditionForm_FormClosing);
             this.Load += new System.EventHandler(this.EditionForm_Load);

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
-    class Cart
+    public class Cart
     {
-        public List<Product> LikedProducts { private set; get; }
-        public Client Buyer { private set; get; }
+        public List<Product> LikedProducts { set; get; }
+        public Client Buyer { set; get; }
 
-        public Cart(List<Product> liked, Client buyer)
+        public Cart()
         {
-            LikedProducts = liked;
-            Buyer = buyer;
+            LikedProducts = new List<Product>();
+          
         }
     }
 }

@@ -149,7 +149,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.Location = new System.Drawing.Point(252, 190);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(232, 159);
@@ -162,7 +162,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // ApplicClient
+            // ApplicMakeClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
-            this.Name = "ApplicClient";
+            this.Name = "ApplicMakeClient";
             this.Text = "Applic";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicClient_FormClosing);
             this.Load += new System.EventHandler(this.Applic_Load);

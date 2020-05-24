@@ -67,7 +67,7 @@
             // IDbox
             // 
             this.IDbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.IDbox.ForeColor = System.Drawing.SystemColors.InfoText;
             this.IDbox.Location = new System.Drawing.Point(153, 328);
             this.IDbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDbox.Multiline = true;
@@ -95,19 +95,19 @@
             // 
             // RegPassword
             // 
-            this.RegPassword.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegPassword.ForeColor = System.Drawing.SystemColors.InfoText;
             this.RegPassword.Location = new System.Drawing.Point(153, 202);
             this.RegPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegPassword.Name = "RegPassword";
-            this.RegPassword.Size = new System.Drawing.Size(318, 33);
+            this.RegPassword.Size = new System.Drawing.Size(318, 35);
             this.RegPassword.TabIndex = 16;
             this.RegPassword.UseSystemPasswordChar = true;
             // 
             // RegName
             // 
             this.RegName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegName.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.RegName.ForeColor = System.Drawing.SystemColors.InfoText;
             this.RegName.Location = new System.Drawing.Point(153, 118);
             this.RegName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegName.Multiline = true;
@@ -200,11 +200,11 @@
             // 
             // RegPassReenter
             // 
-            this.RegPassReenter.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegPassReenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegPassReenter.ForeColor = System.Drawing.SystemColors.InfoText;
             this.RegPassReenter.Location = new System.Drawing.Point(153, 242);
             this.RegPassReenter.Name = "RegPassReenter";
-            this.RegPassReenter.Size = new System.Drawing.Size(318, 33);
+            this.RegPassReenter.Size = new System.Drawing.Size(318, 35);
             this.RegPassReenter.TabIndex = 27;
             this.RegPassReenter.UseSystemPasswordChar = true;
             // 

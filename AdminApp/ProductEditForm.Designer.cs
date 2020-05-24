@@ -163,7 +163,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.Location = new System.Drawing.Point(219, 163);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(232, 159);
@@ -199,7 +199,7 @@
             this.listBoxType.TabIndex = 25;
             this.listBoxType.SelectedIndexChanged += new System.EventHandler(this.listBoxType_SelectedIndexChanged);
             // 
-            // ProductForm
+            // ProductEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
-            this.Name = "ProductForm";
+            this.Name = "ProductEditForm";
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductForm_FormClosing);
             this.Load += new System.EventHandler(this.ProductForm_Load);

@@ -74,5 +74,30 @@ namespace ClientApp
         {
             productBindingSource.ResetBindings(false);
         }
+
+        private void buttonPurchase_Click(object sender, EventArgs e)
+        {
+            int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            Cart cart = new Cart();
+            cart.Buyer = activeUser;
+            for (int i = 0; i < selectedRowCount; i++)
+            {
+                var toBuy = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
+                cart.LikedProducts.Add(toBuy);
+            }
+
+            var buying = new Purchasing(cart);
+            if (buying.ShowDialog() == DialogResult.Yes)
+            {
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    lombard.Products.Remove(cart.LikedProducts[i]);
+                    activeUser.PurchasedGoods.Add(cart.LikedProducts[i]);
+                }
+                lombard.Clients.Find(o => o.ID == activeUser.ID).PurchasedGoods = activeUser.PurchasedGoods;
+                productBindingSource.ResetBindings(false);
+                lombard.IsDirty = true;
+            }
+        }
     }
 }
