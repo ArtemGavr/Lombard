@@ -30,3 +30,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicMakeClient.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicVerificationClient.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicIncomeToClient.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\bin\Debug\ClientApp.exe.CodeAnalysisLog.xml
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\bin\Debug\ClientApp.exe.lastcodeanalysissucceeded

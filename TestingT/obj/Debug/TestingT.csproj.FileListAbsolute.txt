@@ -20,3 +20,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\TestingT\obj\Debug\TestingT.csproj.CopyComplete
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\TestingT\obj\Debug\TestingT.dll
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\TestingT\obj\Debug\TestingT.pdb
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\TestingT\bin\Debug\TestingT.dll.CodeAnalysisLog.xml
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\TestingT\bin\Debug\TestingT.dll.lastcodeanalysissucceeded
