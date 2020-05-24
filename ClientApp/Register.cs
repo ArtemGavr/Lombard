@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Lombard_Project.UserClasses;
+using System;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lombard_Project.UserClasses;
-using Lombard_Project.FilesWorkk;
 
 namespace ClientApp
 {
     public partial class Register : Form
     {
-        Lombard lombard;
+        private Lombard lombard;
+
         public Register(ref Lombard lombard)
         {
             InitializeComponent();
@@ -31,12 +26,10 @@ namespace ClientApp
                 }
                 if (string.IsNullOrWhiteSpace(RegPassword.Text))
                 {
-
                     RegPassword.BackColor = Color.Red;
                 }
                 if (string.IsNullOrWhiteSpace(IDbox.Text))
                 {
-
                     RegPassword.BackColor = Color.Red;
                 }
                 MessageBox.Show("Fill in the blank space, please");
@@ -61,7 +54,7 @@ namespace ClientApp
                 RegPassReenter.BackColor = Color.White;
                 RegPassReenter.Text = string.Empty;
             }
-            else if ( RegPassReenter.Text != RegPassword.Text)
+            else if (RegPassReenter.Text != RegPassword.Text)
             {
                 RegPassword.BackColor = Color.Red;
                 RegPassReenter.BackColor = Color.Red;
@@ -71,7 +64,7 @@ namespace ClientApp
                 RegPassReenter.BackColor = Color.White;
                 RegPassReenter.Text = string.Empty;
             }
-            else if (IDbox.Text.Length != 9 )
+            else if (IDbox.Text.Length != 9)
             {
                 IDbox.BackColor = Color.Red;
                 MessageBox.Show("id has inappropriate length, try again");
@@ -83,7 +76,7 @@ namespace ClientApp
             {
                 string login = RegName.Text;
                 string password = (RegPassword.Text);
-                int iD = Convert.ToInt32( IDbox.Text);
+                int iD = Convert.ToInt32(IDbox.Text);
                 // unique users
                 if (lombard.Clients.FirstOrDefault(u => u.Name == login && u.ID == iD) != null)
                 {
@@ -93,20 +86,15 @@ namespace ClientApp
                 }
                 else
                 {
-                   
-
                     Client user = new Client(iD, login, password);
                     lombard.Clients.Add(user);
                     MessageBox.Show("We are glad to hear you joined us!");
                     lombard.Save();
-                    Form main = new ClientMain(ref lombard,  user );
+                    Form main = new ClientMain(ref lombard, user);
                     main.Show();
-                    
+
                     this.Close();
-
                 }
-
-
             }
         }
 
@@ -121,16 +109,17 @@ namespace ClientApp
 
         private void Register_Load(object sender, EventArgs e)
         {
-
         }
 
         private void Register_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
-            CustomerAutor.Left = this.Left;
-            CustomerAutor.Top = this.Top;
-            CustomerAutor.Show();
-            
+            if (Application.OpenForms.Count == 2)
+            {
+                Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
+                CustomerAutor.Left = this.Left;
+                CustomerAutor.Top = this.Top;
+                CustomerAutor.Show();
+            }
         }
     }
 }

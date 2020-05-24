@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\AdminMain.datasource" />
     <None Include="Properties\DataSources\Lombard_Project.UserClasses.Lombard.datasource" />
@@ -107,6 +108,9 @@
       <Project>{112d73fb-d2ee-4ab9-b82e-e9acc88f2b88}</Project>
       <Name>Lombard_Project</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rose.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

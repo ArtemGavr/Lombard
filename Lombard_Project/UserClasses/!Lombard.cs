@@ -1,16 +1,14 @@
-﻿using System;
+﻿using Lombard_Project.FilesWorkk;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lombard_Project.FilesWorkk;
+using System.Drawing;
+using System.IO;
 
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
     public class Lombard
     {
-
         public List<Product> Products { private set; get; }
         public List<Client> Clients { private set; get; }
         public List<MyApplication> ApplicationsToAdmin { private set; get; }
@@ -37,9 +35,10 @@ namespace Lombard_Project.UserClasses
 
             // Products
             Products.Clear();
+            var noImage = new Bitmap(Path.GetFullPath("rose.png"));
             for (int i = 0; i < n; i++)
             {
-                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i],"Sample", DateTime.Now + TimeSpan.FromDays(i))
+                Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i))
                 //{
                 //    //Id = i,
                 //    Name = $"Product{i}",
@@ -49,8 +48,6 @@ namespace Lombard_Project.UserClasses
                 //}
                 );
             }
-
-            
 
             // ApplicationsToAdmin
             ApplicationsToAdmin.Clear();
@@ -65,7 +62,7 @@ namespace Lombard_Project.UserClasses
             //const int m = 3;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add( new MyApplication(Products[m-i], Clients[m-1]));
+                ApplicationsToUser.Add(new MyApplication(Products[m - i], Clients[m - 1]));
                 //var ps = new List<Portion>();
                 //for (int j = 0; j < m; j++)
                 //{
@@ -73,7 +70,6 @@ namespace Lombard_Project.UserClasses
                 //}
                 //Orders.Add(new Order(ps, Buyers[i], DateTime.Now + TimeSpan.FromDays(i)));
             }
-
         }
 
         public void Save()
@@ -85,5 +81,5 @@ namespace Lombard_Project.UserClasses
         {
             new FilesWork(this).Load();
         }
-    }  
+    }
 }

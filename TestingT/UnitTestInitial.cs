@@ -1,5 +1,4 @@
-﻿using System;
-using Lombard_Project.UserClasses;
+﻿using Lombard_Project.UserClasses;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestingT

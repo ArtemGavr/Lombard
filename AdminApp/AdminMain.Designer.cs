@@ -46,6 +46,7 @@
             this.giverDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +54,9 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageApplications = new System.Windows.Forms.TabPage();
             this.dataGridViewApplics = new System.Windows.Forms.DataGridView();
-            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myApplicationBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1products.SuspendLayout();
@@ -173,7 +174,8 @@
             this.dateTimeDataGridViewTextBoxColumn,
             this.giverDataGridViewTextBoxColumn1,
             this.descriptionDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn});
+            this.typeDataGridViewTextBoxColumn,
+            this.imageDataGridViewImageColumn});
             this.dataGridViewProducts.DataSource = this.productBindingSource;
             this.dataGridViewProducts.Location = new System.Drawing.Point(3, 39);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
@@ -237,6 +239,17 @@
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             this.typeDataGridViewTextBoxColumn.Width = 150;
             // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
+            this.imageDataGridViewImageColumn.HeaderText = "Image";
+            this.imageDataGridViewImageColumn.Image = global::AdminApp.Properties.Resources.rose;
+            this.imageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.imageDataGridViewImageColumn.MinimumWidth = 8;
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
+            this.imageDataGridViewImageColumn.Width = 150;
+            // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
@@ -266,12 +279,14 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // tabPageApplications
             // 
@@ -303,10 +318,6 @@
             this.dataGridViewApplics.TabIndex = 0;
             this.dataGridViewApplics.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewApplics_CellContentDoubleClick);
             // 
-            // myApplicationBindingSource1
-            // 
-            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
-            // 
             // prodDataGridViewTextBoxColumn
             // 
             this.prodDataGridViewTextBoxColumn.DataPropertyName = "Prod";
@@ -325,6 +336,10 @@
             this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
             this.giverDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // myApplicationBindingSource1
+            // 
+            this.myApplicationBindingSource1.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -339,7 +354,6 @@
             this.Text = "AdminMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMain_FormClosing);
             this.Load += new System.EventHandler(this.AdminMain_Load);
-            this.Shown += new System.EventHandler(this.AdminMain_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -371,12 +385,6 @@
         private System.Windows.Forms.DataGridView dataGridViewApplics;
         private System.Windows.Forms.BindingSource myApplicationBindingSource1;
         private System.Windows.Forms.DataGridView dataGridViewProducts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
@@ -384,5 +392,12 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giverDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
     }
 }

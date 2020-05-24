@@ -62,6 +62,7 @@
             // buttonAccept
             // 
             this.buttonAccept.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonAccept.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.buttonAccept.FlatAppearance.BorderSize = 0;
             this.buttonAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAccept.Location = new System.Drawing.Point(592, 323);
@@ -70,11 +71,12 @@
             this.buttonAccept.TabIndex = 2;
             this.buttonAccept.Text = "Accept";
             this.buttonAccept.UseVisualStyleBackColor = false;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+           // this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // buttonBack
             // 
             this.buttonBack.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonBack.FlatAppearance.BorderSize = 0;
             this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -85,7 +87,7 @@
             this.buttonBack.TabIndex = 3;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+           // this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBoxPrice
             // 
@@ -144,6 +146,7 @@
             // buttonDecline
             // 
             this.buttonDecline.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonDecline.DialogResult = System.Windows.Forms.DialogResult.No;
             this.buttonDecline.FlatAppearance.BorderSize = 0;
             this.buttonDecline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDecline.Location = new System.Drawing.Point(464, 323);
@@ -152,7 +155,7 @@
             this.buttonDecline.TabIndex = 23;
             this.buttonDecline.Text = "Decline";
             this.buttonDecline.UseVisualStyleBackColor = false;
-            this.buttonDecline.Click += new System.EventHandler(this.buttonDecline_Click);
+            //this.buttonDecline.Click += new System.EventHandler(this.buttonDecline_Click);
             // 
             // ClientVerification
             // 
@@ -173,7 +176,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ClientVerification";
             this.Text = "Edit";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientVerification_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientVerification_FormClosing);
             this.Load += new System.EventHandler(this.ClientVerification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Lombard_Project.UserClasses;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lombard_Project.UserClasses;
 
 namespace ClientApp
 {
     public partial class VerifyView : Form
     {
+        private Lombard lombard;
+        private Client activeUser;
 
-        Lombard lombard;
-        Client activeUser;
         public VerifyView(ref Lombard lombard, Client client)
         {
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = client;
-            myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver==activeUser);
+            myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
         }
 
         private void VerifyView_Load(object sender, EventArgs e)
@@ -35,6 +30,7 @@ namespace ClientApp
             CustomerMain.Left = this.Left;
             CustomerMain.Top = this.Top;
             CustomerMain.Show();
+            this.Close();
         }
 
         private void VerifyView_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,12 +43,27 @@ namespace ClientApp
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-                MyApplication toaccept = dataGridView1.Rows[e.RowIndex].DataBoundItem as MyApplication;
-                Form accept = new ClientVerification(ref lombard, toaccept, e.RowIndex, activeUser);
-                this.Hide();
-                accept.Show();
-            
+            MyApplication toaccept = dataGridView1.Rows[e.RowIndex].DataBoundItem as MyApplication;
+            var accept = new ClientVerification(toaccept);
+            DialogResult res = accept.ShowDialog();
+            if (res == DialogResult.Yes)
+            {
+                lombard.ApplicationsToUser.Remove(accept.work);
+
+                Product prod = accept.work.Prod;
+                prod.DateTime = DateTime.Now;
+                lombard.Products.Add(prod);
+                myApplicationBindingSource.ResetBindings(false);
+                MessageBox.Show("You accepted the lombard offer", "accept", MessageBoxButtons.OK);
+                lombard.Save();
+            }
+            if (res == DialogResult.No)
+            {
+                lombard.ApplicationsToUser.Remove(accept.work);
+                myApplicationBindingSource.ResetBindings(false);
+                MessageBox.Show("You declined the lombard offer", "Decline", MessageBoxButtons.OK);
+                lombard.Save();
+            }
         }
     }
 }

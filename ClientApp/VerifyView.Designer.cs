@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giverDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource)).BeginInit();
@@ -41,6 +41,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prodDataGridViewTextBoxColumn,
@@ -54,10 +55,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // myApplicationBindingSource
-            // 
-            this.myApplicationBindingSource.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
             // 
             // prodDataGridViewTextBoxColumn
             // 
@@ -74,6 +71,10 @@
             this.giverDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.giverDataGridViewTextBoxColumn.Name = "giverDataGridViewTextBoxColumn";
             this.giverDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // myApplicationBindingSource
+            // 
+            this.myApplicationBindingSource.DataSource = typeof(Lombard_Project.UserClasses.MyApplication);
             // 
             // buttonBack
             // 
@@ -94,6 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridView1);

@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Lombard_Project.UserClasses;
+using System;
 using System.Windows.Forms;
-using Lombard_Project.FilesWorkk;
-using Lombard_Project.UserClasses;
 
 namespace ClientApp
 {
     public partial class ClientMain : Form
     {
-        Lombard lombard;
+        private Lombard lombard;
 
-        Client activeUser;
+        private Client activeUser;
+
         public ClientMain(ref Lombard lombard, Client user)
         {
             InitializeComponent();
@@ -35,7 +28,6 @@ namespace ClientApp
         {
             Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
 
-
             if (!lombard.IsDirty)
             {
                 CustomerAutor.Close();
@@ -49,11 +41,13 @@ namespace ClientApp
                     CustomerAutor.Close();
 
                     break;
+
                 case DialogResult.Yes:
                     lombard.Save();
                     CustomerAutor.Close();
 
                     break;
+
                 case DialogResult.No:
                     CustomerAutor.Close();
 

@@ -1,20 +1,14 @@
-﻿using System;
+﻿using Lombard_Project.UserClasses;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lombard_Project.FilesWorkk;
-using Lombard_Project.UserClasses;
 
 namespace AdminApp
 {
     public partial class AdminMain : Form
     {
-        Lombard lombard;
+        private Lombard lombard;
+
         public AdminMain()
         {
             InitializeComponent();
@@ -26,11 +20,10 @@ namespace AdminApp
         private void AdminMain_Load(object sender, EventArgs e)
         {
             lombard.Load();
+            //lombard.IsDirty = true;
             productBindingSource.ResetBindings(false);
             myApplicationBindingSource1.ResetBindings(false);
         }
-
-    
 
         private void AdminMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -42,9 +35,11 @@ namespace AdminApp
                 case DialogResult.Cancel:
                     e.Cancel = true;
                     break;
+
                 case DialogResult.Yes:
                     lombard.Save();
                     break;
+
                 case DialogResult.No:
                     break;
             }
@@ -52,22 +47,7 @@ namespace AdminApp
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            if (!lombard.IsDirty)
-                this.Close();
-            var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
-            switch (res)
-            {
-                case DialogResult.Cancel:
-                    
-                    break;
-                case DialogResult.Yes:
-                    lombard.Save();
-                    this.Close();
-                    break;
-                case DialogResult.No:
-                    this.Close();
-                    break;
-            }
+            this.Close();
         }
 
         private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -78,22 +58,7 @@ namespace AdminApp
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!lombard.IsDirty)
-                this.Close();
-            var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
-            switch (res)
-            {
-                case DialogResult.Cancel:
-
-                    break;
-                case DialogResult.Yes:
-                    lombard.Save();
-                    this.Close();
-                    break;
-                case DialogResult.No:
-                    this.Close();
-                    break;
-            }
+            this.Close();
         }
 
         private void dataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -109,30 +74,35 @@ namespace AdminApp
             }
         }
 
-        private void AdminMain_Shown(object sender, EventArgs e)
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // lombard.Load();
-           // myApplicationBindingSource1.ResetBindings(false);
+            
+            // List<Product> deletion = new List<Product>();
+            int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
+
+            for (int i = 0; i < selectedRowCount; i++)
+            {
+                var toDel = dataGridViewApplics.SelectedRows[i].DataBoundItem as Product;
+                var res = MessageBox.Show($"Delete {toDel.Name} ?", "", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    lombard.Products.Remove(toDel);
+                    productBindingSource.ResetBindings(false);
+                    lombard.IsDirty = true;
+                }
+            }
+            
         }
 
-
-
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    string login = "user2";
-        //    string password = "123456";
-        //    int iD = 123456789;
-        //    // unique users
-
-        //    {
-
-
-        //        Client user = new Client(iD, login, password);
-        //        lombard.Clients.Add(user);
-        //        MessageBox.Show("We are glad to hear you joined us!");
-        //        lombard.Save();
-        //    }
-        //}
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var toEdit = dataGridViewProducts.SelectedRows[0].DataBoundItem as Product;
+            //var pf = new ProductForm(toEdit);
+            //if (pf.ShowDialog() == DialogResult.OK)
+            //{
+            //    productBindingSource.ResetBindings(false);
+            //    lombard.IsDirty = true;
+            //}
+        }
     }
 }

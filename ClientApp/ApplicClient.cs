@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Lombard_Project.UserClasses;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using Lombard_Project.FilesWorkk;
-using Lombard_Project.UserClasses;
 
 namespace ClientApp
 {
     public partial class ApplicClient : Form
     {
-        Lombard lombard;
-        Client activeuser;
+        private Lombard lombard;
+        private Client activeuser;
+
         //Product intake;
         //Form papa;
         public ApplicClient(ref Lombard lombard, Client user)
@@ -28,7 +23,6 @@ namespace ClientApp
 
         private void Applic_Load(object sender, EventArgs e)
         {
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,8 +37,9 @@ namespace ClientApp
         private void buttonSendAppl_Click(object sender, EventArgs e)
         {
             #region correctcheck
+
             int number;
-            if (string.IsNullOrWhiteSpace(textBoxName.Text) || string.IsNullOrWhiteSpace(textBoxPriceDesired.Text) )
+            if (string.IsNullOrWhiteSpace(textBoxName.Text) || string.IsNullOrWhiteSpace(textBoxPriceDesired.Text))
             {
                 if (string.IsNullOrWhiteSpace(textBoxName.Text))
                 {
@@ -52,16 +47,14 @@ namespace ClientApp
                 }
                 if (string.IsNullOrWhiteSpace(textBoxPriceDesired.Text))
                 {
-
                     textBoxPriceDesired.BackColor = Color.Red;
                 }
-                
+
                 MessageBox.Show("Fill in the blank space, please");
                 textBoxName.BackColor = Color.White;
                 textBoxPriceDesired.BackColor = Color.White;
-                
             }
-            else if (textBoxName.Text.Length <= 2 )
+            else if (textBoxName.Text.Length <= 2)
             {
                 textBoxName.BackColor = Color.Red;
                 MessageBox.Show("Name/Adress has inappropriate length, try again");
@@ -74,20 +67,22 @@ namespace ClientApp
                 MessageBox.Show("Price is not  number, try again");
                 textBoxPriceDesired.BackColor = Color.White;
                 textBoxPriceDesired.Text = string.Empty;
-              
             }
-#endregion
+
+            #endregion correctcheck
+
             //filled and long enough
             else
             {
                 string text = textBoxName.Text;
                 int price = Convert.ToInt32(textBoxPriceDesired.Text);
                 string description = textBoxDescription.Text;
-  
+
+                var noImage = new Bitmap(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"ClientApp\Images\rose.png"));
 
                 if (radioButtonItemName.Checked == true)
                 {
-                    Product intake = new Item( text,  price,  activeuser,  description);
+                    Product intake = new Item(text, price, activeuser, description, noImage);
                     MyApplication applic = new MyApplication((Product)intake, activeuser);
                     lombard.ApplicationsToAdmin.Add(applic);
                     // MessageBox.Show(intake.ToString(),"",MessageBoxButtons.OK);
@@ -101,9 +96,7 @@ namespace ClientApp
                     //MessageBox.Show(intake.ToString(), "", MessageBoxButtons.OK);
                 }
 
-               
-                
-                //MessageBox.Show((lombard.ApplicationsToAdmin[lombard.ApplicationsToAdmin.Count()-1].Prod.ToString()), "", MessageBoxButtons.OK); 
+                //MessageBox.Show((lombard.ApplicationsToAdmin[lombard.ApplicationsToAdmin.Count()-1].Prod.ToString()), "", MessageBoxButtons.OK);
                 MessageBox.Show("Application added succesfully!");
                 lombard.Save();
                 Form CustomerMain = System.Windows.Forms.Application.OpenForms[1];
@@ -112,14 +105,8 @@ namespace ClientApp
                 CustomerMain.Show();
 
                 this.Close();
-
-                
-
-
             }
         }
-
-       
 
         private void ApplicClient_FormClosing(object sender, FormClosingEventArgs e)
         {

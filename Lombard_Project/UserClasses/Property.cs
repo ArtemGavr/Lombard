@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
-    public class Property: Product
+    public class Property : Product
     {
         public override string Name { get; set; }
         public override int Value { get; set; }
@@ -16,7 +13,9 @@ namespace Lombard_Project.UserClasses
         public override string Description { get; set; }
         public override string Type { get; set; }
 
-        public Property(string adress, int value, Client giver,string descr, DateTime? t = null)
+        public override Image Image { get; set; }
+
+        public Property(string adress, int value, Client giver, string descr, DateTime? t = null)
         {
             Name = adress;
             Value = value;
@@ -29,7 +28,9 @@ namespace Lombard_Project.UserClasses
                 DateTime = (DateTime)t;
         }
 
-        public Property() : base() { }
+        public Property() : base()
+        {
+        }
 
         public override string ToString()
         {
