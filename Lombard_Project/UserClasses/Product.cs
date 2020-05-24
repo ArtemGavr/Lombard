@@ -14,6 +14,8 @@ namespace Lombard_Project.UserClasses
         public abstract string Type { get; set; }
         public abstract Image Image { get; set; }
 
+        public abstract string GiverName { get; }
+
         public Product()
         {
         }

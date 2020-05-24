@@ -35,7 +35,8 @@ namespace Lombard_Project.UserClasses
 
             // Products
             Products.Clear();
-            var noImage = new Bitmap(Path.GetFullPath("rose.png"));
+            var noImage = new Bitmap(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"ClientApp\Images\rose.png"));
+
             for (int i = 0; i < n; i++)
             {
                 Products.Add((Product)new Item($"Product{i}", i * 10, Clients[i], "Sample", noImage, DateTime.Now + TimeSpan.FromDays(i))

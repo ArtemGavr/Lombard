@@ -16,11 +16,7 @@ namespace AdminApp
 
         private void buttonSendAppl_Click(object sender, EventArgs e)
         {
-            //Form AdminMain = System.Windows.Forms.Application.OpenForms[0];
-            //AdminMain.Left = this.Left;
-            //AdminMain.Top = this.Top;
-            //this.Close();
-            //AdminMain.Show();
+          
         }
 
         private void EditionForm_Load(object sender, EventArgs e)
@@ -36,10 +32,7 @@ namespace AdminApp
 
         private void EditionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Form AdminMain = System.Windows.Forms.Application.OpenForms[0];
-            //AdminMain.Left = this.Left;
-            //AdminMain.Top = this.Top;
-            //AdminMain.Show();
+          
             if (DialogResult != DialogResult.OK)
                 return;
         }

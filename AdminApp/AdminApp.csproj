@@ -52,22 +52,25 @@
     <Compile Include="AdminMain.Designer.cs">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditionForm.Designer.cs">
       <DependentUpon>EditionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SlotEdition.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SlotEdition.Designer.cs">
-      <DependentUpon>SlotEdition.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditionForm.resx">
       <DependentUpon>EditionForm.cs</DependentUpon>

@@ -13,6 +13,7 @@ namespace AdminApp
         {
             InitializeComponent();
             lombard = new Lombard();
+            
             productBindingSource.DataSource = lombard.Products;
             myApplicationBindingSource1.DataSource = lombard.ApplicationsToAdmin;
         }
@@ -20,6 +21,7 @@ namespace AdminApp
         private void AdminMain_Load(object sender, EventArgs e)
         {
             lombard.Load();
+            //lombard.FillTestData(10);
             //lombard.IsDirty = true;
             productBindingSource.ResetBindings(false);
             myApplicationBindingSource1.ResetBindings(false);
@@ -97,12 +99,13 @@ namespace AdminApp
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toEdit = dataGridViewProducts.SelectedRows[0].DataBoundItem as Product;
-            //var pf = new ProductForm(toEdit);
-            //if (pf.ShowDialog() == DialogResult.OK)
-            //{
-            //    productBindingSource.ResetBindings(false);
-            //    lombard.IsDirty = true;
-            //}
+            var pf = new ProductForm(toEdit);
+            if (pf.ShowDialog() == DialogResult.OK)
+            {
+                productBindingSource.ResetBindings(false);
+                lombard.IsDirty = true;
+            }
+            productBindingSource.ResetBindings(false);
         }
     }
 }

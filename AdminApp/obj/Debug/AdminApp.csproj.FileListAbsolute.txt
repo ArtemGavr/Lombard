@@ -15,3 +15,4 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\bin\Debug\ClientApp.exe
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\bin\Debug\ClientApp.pdb
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\bin\Debug\ClientApp.exe.config
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ProductForm.resources
