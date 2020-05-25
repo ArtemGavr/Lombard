@@ -19,6 +19,7 @@ namespace Lombard_Project.UserClasses
             get { return Prod.Name; }
         }
 
+
         public MyApplication(Product prod, Client clie)
         {
             Prod = prod;

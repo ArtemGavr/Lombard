@@ -98,7 +98,7 @@ namespace ClientApp
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
             Cart cart = new Cart();
             cart.Buyer = activeUser;
-            cart.LikedProducts.Clear();
+            //cart.LikedProducts.Clear();
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toBuy = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
@@ -106,15 +106,15 @@ namespace ClientApp
                 cart.LikedProducts.Add(toBuy);
             }
 
-            var buying = new Purchasing(cart);
+            var buying = new Purchasing(ref cart);
             if (buying.ShowDialog() == DialogResult.Yes)
             {
-                for (int i = 0; i < selectedRowCount-1; i++)
+                for (int i = 0; i < selectedRowCount; i++)
                 {
-                    lombard.Products.Remove(cart.LikedProducts[i]);
-                    activeUser.PurchasedGoods.Add(cart.LikedProducts[i]);
+                    activeUser.PurchasedGoods.Add(cart.LikedProducts[0]);
+                    lombard.Products.Remove(cart.LikedProducts[0]);
                     //cart.Buyer.PurchasedGoods.Add(cart.LikedProducts[i]);
-                    cart.LikedProducts.RemoveAt(i);
+                    cart.LikedProducts.RemoveAt(0);
                 }
 
                 
@@ -128,7 +128,9 @@ namespace ClientApp
                 productBindingSource.ResetBindings(false);
                
                 lombard.IsDirty = true;
-                buying = new Purchasing(cart);
+
+                //cart.Buyer.PurchasedGoods.AddRange(activeUser.PurchasedGoods);
+                buying = new Purchasing(ref cart);
                 buying.ShowDialog();
 
 

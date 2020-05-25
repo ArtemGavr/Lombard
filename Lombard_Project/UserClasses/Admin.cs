@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
-    class Admin : User
+    public class Admin : User
     {
         public override int ID { get ; set ; }
         public override string Name { get ; set; }

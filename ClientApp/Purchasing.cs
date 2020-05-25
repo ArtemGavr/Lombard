@@ -18,7 +18,7 @@ namespace ClientApp
         {
             InitializeComponent();
         }
-        public Purchasing(Cart cart):this()
+        public Purchasing(ref Cart cart):this()
         {
             this.cart = cart;
             productBindingSource.DataSource = this.cart.LikedProducts;
