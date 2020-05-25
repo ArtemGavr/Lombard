@@ -1,5 +1,7 @@
 ﻿using Lombard_Project.UserClasses;
 using System;
+using System.Collections.Generic;
+using System.Collections;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,6 +18,7 @@ namespace ClientApp
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = client;
+        
             myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
         }
 

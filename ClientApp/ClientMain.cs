@@ -98,16 +98,18 @@ namespace ClientApp
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
             Cart cart = new Cart();
             cart.Buyer = activeUser;
+            cart.LikedProducts.Clear();
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toBuy = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
+                
                 cart.LikedProducts.Add(toBuy);
             }
 
             var buying = new Purchasing(cart);
             if (buying.ShowDialog() == DialogResult.Yes)
             {
-                for (int i = 0; i < selectedRowCount; i++)
+                for (int i = 0; i < selectedRowCount-1; i++)
                 {
                     lombard.Products.Remove(cart.LikedProducts[i]);
                     activeUser.PurchasedGoods.Add(cart.LikedProducts[i]);
