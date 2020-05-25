@@ -22,6 +22,8 @@ namespace AdminApp
 
         private void EditionForm_Load(object sender, EventArgs e)
         {
+            work.Prod.StoreDays = 20;
+            DaysToStore.DataBindings.Add(new Binding("Value",work.Prod,"StoreDays"));
             textBoxName.DataBindings.Add(new Binding("Text", work.Prod, "Name"));
             textBoxPrice.DataBindings.Add(new Binding("Text", work.Prod, "Value"));
             textBoxDescription.DataBindings.Add(new Binding("Text", work.Prod, "Description"));

@@ -16,7 +16,7 @@ namespace Lombard_Project.UserClasses
 
         public abstract string GiverName { get; }
         public abstract int Price { get; set; }
-       // public abstract int StoreDays { get; set; }
+        public abstract int StoreDays { get; set; }
 
         public Product()
         {

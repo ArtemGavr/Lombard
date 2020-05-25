@@ -43,7 +43,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.DaysToStore = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DaysToStore)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -187,6 +190,7 @@
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(183, 145);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(232, 159);
@@ -199,12 +203,51 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // DaysToStore
+            // 
+            this.DaysToStore.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DaysToStore.Location = new System.Drawing.Point(705, 78);
+            this.DaysToStore.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.DaysToStore.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.DaysToStore.Name = "DaysToStore";
+            this.DaysToStore.Size = new System.Drawing.Size(83, 26);
+            this.DaysToStore.TabIndex = 32;
+            this.DaysToStore.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(646, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 29);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Days to store";
+            // 
             // ApplicEditionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.DaysToStore);
             this.Controls.Add(this.listBoxType);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox);
@@ -224,6 +267,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditionForm_FormClosing);
             this.Load += new System.EventHandler(this.EditionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DaysToStore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +290,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.NumericUpDown DaysToStore;
+        private System.Windows.Forms.Label label4;
     }
 }

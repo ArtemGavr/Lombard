@@ -41,6 +41,8 @@
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelDays = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,12 +197,36 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Image";
             // 
+            // labelDays
+            // 
+            this.labelDays.AutoSize = true;
+            this.labelDays.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDays.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDays.Location = new System.Drawing.Point(367, 67);
+            this.labelDays.Name = "labelDays";
+            this.labelDays.Size = new System.Drawing.Size(60, 31);
+            this.labelDays.TabIndex = 32;
+            this.labelDays.Text = "type";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(322, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 29);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Days to store";
+            // 
             // ApplicVerificationClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelDays);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelPrice);
@@ -238,5 +264,7 @@
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDays;
+        private System.Windows.Forms.Label label5;
     }
 }

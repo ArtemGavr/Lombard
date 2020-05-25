@@ -25,7 +25,7 @@ namespace ClientApp
         private void SignUpForm_Load(object sender, EventArgs e)
         {
             lombard.Load();
-            lombard.FillTestData(10); //lombard.Save(); lombard.Load();
+            //lombard.FillTestData(10); //lombard.Save(); lombard.Load();
             
             //lombard.FillTestData(15);
         }

@@ -21,6 +21,7 @@ namespace ClientApp
             labelDescription.Text = work.Prod.Description;
             pictureBox.Image = work.Prod.Image;
             labelType.Text = work.Prod.Type;
+            labelDays.Text = work.Prod.StoreDays.ToString();
         }
 
         private void buttonAccept_Click(object sender, EventArgs e)

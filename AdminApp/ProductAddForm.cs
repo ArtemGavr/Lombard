@@ -76,6 +76,7 @@ namespace AdminApp
                 string description = textBoxDescription.Text;
                 int price = Convert.ToInt32(textBoxPrice.Text);
                 Image image = pictureBox.Image;
+                int days = Convert.ToInt32(DaysToStore.Value);
 
                 if (listBoxType.SelectedIndex == 0)
                 {
@@ -87,7 +88,8 @@ namespace AdminApp
                         Image = image,
                         Type = "item",
                         DateTime = DateTime.Now,
-                        Giver = new Client(-1,"lombard","0")
+                        Giver = new Client(-1, "lombard", "0"),
+                        StoreDays = days
                     };
                     lombard.Products.Add((Product)item);
                     DialogResult = DialogResult.OK;
@@ -102,7 +104,8 @@ namespace AdminApp
                         Image = image,
                         Type = "property",
                         DateTime = DateTime.Now,
-                        Giver = new Client(-1,"lombard","0")
+                        Giver = new Client(-1,"lombard","0"),
+                        StoreDays = days
                     };
                     lombard.Products.Add((Product)prop);
                     DialogResult = DialogResult.OK;

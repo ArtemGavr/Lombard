@@ -43,11 +43,11 @@ namespace Lombard_Project.UserClasses
             {
                 if (i % 2 == 0) 
                 {
-                    Products.Add((Product)new Item($"Item{i}", 10+i * 10, Clients[i], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i+16)));
+                    Products.Add((Product)new Item($"Item{i}", 10+i * 10, Clients[i], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i+16)) { Image = noImage, StoreDays = 20 });
                 }
                 else
                 {
-                    Products.Add((Product)new Property($"Property{i}", 10+i * 10, Clients[i], "Sample", DateTime.Now - TimeSpan.FromDays(i+16)) { Image= noImage });
+                    Products.Add((Product)new Property($"Property{i}", 10+i * 10, Clients[i], "Sample", DateTime.Now - TimeSpan.FromDays(i+16)) { Image= noImage, StoreDays=20});
                 }
                 
             }
@@ -82,10 +82,10 @@ namespace Lombard_Project.UserClasses
             for (int i = 0; i < Products.Count; i++)
             {
                 int days = Convert.ToInt32((DateTime.Now - Products[i].DateTime).TotalDays);
-                if (days>20)
+                if (days>Products[i].StoreDays)
                     Products[i].Price =Convert.ToInt32( 1.2* Products[i].Value);
                 else
-                    Products[i].Price = Convert.ToInt32((1+(days*0.01)) * Products[i].Value);
+                    Products[i].Price = Convert.ToInt32((1+(0.2*days / Products[i].StoreDays )) * Products[i].Value);
             }
         }
     }

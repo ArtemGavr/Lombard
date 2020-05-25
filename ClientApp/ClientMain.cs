@@ -23,8 +23,8 @@ namespace ClientApp
             this.activeUser = user;
 
             presentList = new List<Product>();
-            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
-            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
+            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= o.StoreDays));
+            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
             productBindingSource.DataSource = presentList;
 
             //productBindingSource.DataSource 

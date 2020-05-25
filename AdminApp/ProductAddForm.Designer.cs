@@ -43,7 +43,10 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
+            this.DaysToStore = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DaysToStore)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxType
@@ -198,12 +201,51 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(436, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 29);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Days to store";
+            // 
+            // DaysToStore
+            // 
+            this.DaysToStore.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DaysToStore.Location = new System.Drawing.Point(449, 80);
+            this.DaysToStore.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.DaysToStore.Minimum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.DaysToStore.Name = "DaysToStore";
+            this.DaysToStore.Size = new System.Drawing.Size(83, 26);
+            this.DaysToStore.TabIndex = 40;
+            this.DaysToStore.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
             // ProductAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.DaysToStore);
             this.Controls.Add(this.listBoxType);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox);
@@ -223,6 +265,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductAddForm_FormClosing);
             this.Load += new System.EventHandler(this.ProductAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DaysToStore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +288,7 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown DaysToStore;
     }
 }
