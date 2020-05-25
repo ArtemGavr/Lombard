@@ -26,7 +26,7 @@ namespace AdminApp
 
         private void ProductForm_Load(object sender, EventArgs e)
         {
-            DaysToStore.DataBindings.Add(new Binding("Value", work.Prod, "StoreDays"));
+            DaysToStore.DataBindings.Add(new Binding("Value", prod, "StoreDays"));
             textBoxName.DataBindings.Add(new Binding("Text", prod, "Name"));
             textBoxPrice.DataBindings.Add(new Binding("Text", prod, "Value"));
             textBoxDescription.DataBindings.Add(new Binding("Text", prod, "Description"));
