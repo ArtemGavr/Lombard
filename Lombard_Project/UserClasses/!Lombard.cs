@@ -43,11 +43,11 @@ namespace Lombard_Project.UserClasses
             {
                 if (i % 2 == 0) 
                 {
-                    Products.Add((Product)new Item($"Item{i}", 10+i * 10, Clients[0], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i+16)));
+                    Products.Add((Product)new Item($"Item{i}", 10+i * 10, Clients[i], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i+16)));
                 }
                 else
                 {
-                    Products.Add((Product)new Property($"Property{i}", 10+i * 10, Clients[0], "Sample", DateTime.Now - TimeSpan.FromDays(i+16)) { Image= noImage });
+                    Products.Add((Product)new Property($"Property{i}", 10+i * 10, Clients[i], "Sample", DateTime.Now - TimeSpan.FromDays(i+16)) { Image= noImage });
                 }
                 
             }
@@ -57,7 +57,7 @@ namespace Lombard_Project.UserClasses
             const int m = 5;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToAdmin.Add(new MyApplication(Products[i], Clients[0]));
+                ApplicationsToAdmin.Add(new MyApplication(Products[0], Clients[0]));
             }
 
             // ApplicationsToUser
@@ -65,7 +65,7 @@ namespace Lombard_Project.UserClasses
           
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add(new MyApplication(Products[i], Clients[0]));
+                ApplicationsToUser.Add(new MyApplication(Products[0], Clients[0]));
                 
             }
         }

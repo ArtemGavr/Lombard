@@ -27,10 +27,17 @@ namespace ClientApp
 
         private void buttonAccept_Click(object sender, EventArgs e)
         {
-            var res = MessageBox.Show($"Are you sure about the purchase?", "", MessageBoxButtons.YesNo);
-            if (res == DialogResult.Yes)
+            if (cart.LikedProducts.Count > 0)
             {
-                DialogResult = DialogResult.Yes;
+                var res = MessageBox.Show($"Are you sure about the purchase?", "", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    DialogResult = DialogResult.Yes;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"You have nothing to buy", "", MessageBoxButtons.OK);
             }
         }
 
@@ -38,6 +45,11 @@ namespace ClientApp
         {
             productBindingSource.ResetBindings(false);
             productBindingSourcePurchased.ResetBindings(false);
+            if (cart.LikedProducts.Count < 1)
+            {
+                tabControl1.Select();
+               tabControl1.DeselectTab("tabPageBuy");
+            }
         }
     }
 }

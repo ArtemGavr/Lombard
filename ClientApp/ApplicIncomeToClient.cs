@@ -57,7 +57,6 @@ namespace ClientApp
 
                     myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
                     myApplicationBindingSource.ResetBindings(false);
-                    MessageBox.Show("You accepted the lombard offer", "accept", MessageBoxButtons.OK);
                     lombard.Save();
                 }
                 if (res == DialogResult.No)
@@ -65,12 +64,11 @@ namespace ClientApp
                     lombard.ApplicationsToUser.Remove(accept.work);
                     myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
                     myApplicationBindingSource.ResetBindings(false);
-                    MessageBox.Show("You declined the lombard offer", "Decline", MessageBoxButtons.OK);
                     lombard.Save();
                 }
             }
         }
 
-       
+      
     }
 }

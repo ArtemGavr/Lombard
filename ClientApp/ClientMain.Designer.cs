@@ -69,6 +69,7 @@
             // 
             this.dataGridViewProducts.AllowUserToAddRows = false;
             this.dataGridViewProducts.AutoGenerateColumns = false;
+            this.dataGridViewProducts.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -86,6 +87,8 @@
             this.dataGridViewProducts.RowTemplate.Height = 28;
             this.dataGridViewProducts.Size = new System.Drawing.Size(1094, 436);
             this.dataGridViewProducts.TabIndex = 2;
+            this.dataGridViewProducts.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewProducts_DataBindingComplete);
+            this.dataGridViewProducts.BindingContextChanged += new System.EventHandler(this.dataGridViewProducts_BindingContextChanged);
             // 
             // nameDataGridViewTextBoxColumn
             // 

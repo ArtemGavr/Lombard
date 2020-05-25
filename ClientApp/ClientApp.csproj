@@ -52,12 +52,6 @@
     <Compile Include="ApplicMakeClient.Designer.cs">
       <DependentUpon>ApplicMakeClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Buying.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Buying.Designer.cs">
-      <DependentUpon>Buying.cs</DependentUpon>
-    </Compile>
     <Compile Include="Purchasing.cs">
       <SubType>Form</SubType>
     </Compile>

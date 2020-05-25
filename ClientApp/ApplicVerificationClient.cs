@@ -22,5 +22,15 @@ namespace ClientApp
             pictureBox.Image = work.Prod.Image;
             labelType.Text = work.Prod.Type;
         }
+
+        private void buttonAccept_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You accepted the lombard offer", "accept", MessageBoxButtons.OK);
+        }
+
+        private void buttonDecline_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You declined the lombard offer", "Decline", MessageBoxButtons.OK);
+        }
     }
 }

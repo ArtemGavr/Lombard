@@ -43,6 +43,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBuy = new System.Windows.Forms.TabPage();
             this.tabPagePurchased = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +53,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSourcePurchased = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.AllowDrop = true;
             this.tabControl1.Controls.Add(this.tabPageBuy);
             this.tabControl1.Controls.Add(this.tabPagePurchased);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -194,6 +196,7 @@
             // tabPageBuy
             // 
             this.tabPageBuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageBuy.Controls.Add(this.button2);
             this.tabPageBuy.Controls.Add(this.buttonAccept);
             this.tabPageBuy.Controls.Add(this.dataGridView1);
             this.tabPageBuy.Controls.Add(this.buttonDecline);
@@ -215,6 +218,19 @@
             this.tabPagePurchased.Size = new System.Drawing.Size(1132, 558);
             this.tabPagePurchased.TabIndex = 1;
             this.tabPagePurchased.Text = "Purchased";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 501);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 57);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // dataGridView2
             // 
@@ -308,18 +324,18 @@
             // 
             this.productBindingSourcePurchased.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 501);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 57);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(8, 445);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 57);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Purchasing
             // 
@@ -355,7 +371,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonDecline;
         private System.Windows.Forms.Button buttonAccept;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageBuy;
         private System.Windows.Forms.TabPage tabPagePurchased;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -368,5 +383,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.BindingSource productBindingSourcePurchased;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TabControl tabControl1;
     }
 }
