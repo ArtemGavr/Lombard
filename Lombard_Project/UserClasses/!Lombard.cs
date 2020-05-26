@@ -7,13 +7,17 @@ using System.IO;
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
+
+    // Основний класс, що зберігає всі данні.
     public class Lombard
     {
+        // Коллекції для збереження предметів, користувачів та аплікацій.
         public List<Product> Products { private set; get; }
         public List<Client> Clients { private set; get; }
         public List<MyApplication> ApplicationsToAdmin { private set; get; }
         public List<MyApplication> ApplicationsToUser { private set; get; }
 
+        // Перевіряє чи змінені данні в файлу.
         public bool IsDirty = false;
 
         public Lombard()
@@ -24,16 +28,17 @@ namespace Lombard_Project.UserClasses
             ApplicationsToUser = new List<MyApplication>();
         }
 
+        // Заповнює класс тестовими данними.
         public void FillTestData(int n)
         {
-            // Clients
+            // Clients.
             Clients.Clear();
             for (int i = 1; i <= n; i++)
             {
                 Clients.Add(new Client(i + 10000, $"Client{i}", "12345"));
             }
 
-            // Products
+            // Products.
             Products.Clear();
             var noImage = new Bitmap(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"ClientApp\Images\rose.png"));
 
@@ -49,7 +54,7 @@ namespace Lombard_Project.UserClasses
                 }
             }
 
-            // ApplicationsToAdmin
+            // ApplicationsToAdmin.
             ApplicationsToAdmin.Clear();
             const int m = 5;
             for (int i = 0; i < m; i++)
@@ -57,7 +62,7 @@ namespace Lombard_Project.UserClasses
                 ApplicationsToAdmin.Add(new MyApplication(Products[0], Clients[0]));
             }
 
-            // ApplicationsToUser
+            // ApplicationsToUser.
             ApplicationsToUser.Clear();
 
             for (int i = 0; i < m; i++)
@@ -65,12 +70,14 @@ namespace Lombard_Project.UserClasses
                 ApplicationsToUser.Add(new MyApplication(Products[0], Clients[0]));
             }
         }
-
+        
+        // Зберегає данні.
         public void Save()
         {
             new FilesWork(this).Save();
         }
 
+        // Завантажує данні.
         public void Load()
         {
             new FilesWork(this).Load();

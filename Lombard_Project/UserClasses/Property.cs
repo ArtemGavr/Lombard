@@ -4,6 +4,8 @@ using System.Drawing;
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
+
+    // Класс "Квартира", унаслідує "Товар".
     public class Property : Product
     {
         public override string Name { get; set; }

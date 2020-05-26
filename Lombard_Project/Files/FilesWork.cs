@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Lombard_Project.FilesWorkk
 {
+    //тЗбереження та завантаження серіалізованих данних.
     public class FilesWork
     {
         private Lombard lombard;
@@ -18,6 +19,7 @@ namespace Lombard_Project.FilesWorkk
             this.lombard = lombard;
         }
 
+        // Збереження даних у файл.
         public void Save()
         {
             using (Stream stream = File.Create(path + fileName))
@@ -27,6 +29,7 @@ namespace Lombard_Project.FilesWorkk
             }
         }
 
+        // Заввнтаження данних з файлу.
         public void Load()
         {
             using (Stream stream = File.OpenRead(path + fileName))

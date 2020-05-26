@@ -3,15 +3,19 @@
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
+    // Класс аплікації.
     public class MyApplication
     {
-        //public string Name { set; get; }
+        // Який продукт здали.
         public Product Prod { set; get; }
-
+        // Хто здав.
         public Client Giver { set; get; }
-
-        public string ClientName { get { return Giver.Name; } }
-
+        // Повертає ім'я клієнта для коректного відображення. 
+        public string ClientName 
+        { 
+            get { return Giver.Name; } 
+        }
+        // Повертає назву товару для коректног відображення. 
         public string ProductName
         {
             get { return Prod.Name; }
