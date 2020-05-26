@@ -225,19 +225,9 @@
             0,
             0,
             0});
-            this.DaysToStore.Minimum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
             this.DaysToStore.Name = "DaysToStore";
             this.DaysToStore.Size = new System.Drawing.Size(83, 26);
             this.DaysToStore.TabIndex = 40;
-            this.DaysToStore.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
             // 
             // AddProductForm
             // 

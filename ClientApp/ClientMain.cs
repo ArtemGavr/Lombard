@@ -23,13 +23,20 @@ namespace ClientApp
             this.activeUser = user;
 
             presentList = new List<Product>();
-            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= o.StoreDays));
-            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
+            // Додаємо здані клієнтом предмети.
+            presentList.AddRange(lombard.Products.Where(
+                o => o.Giver == activeUser &&
+                Convert.ToInt32(
+                    (DateTime.Now - o.DateTime).TotalDays) <= o.StoreDays));
+            // Додаємо предмети додані адміном.
+            presentList.AddRange(lombard.Products.Where(o => o.Giver.ID == -1));
+            // Додаємо всі предмети у продажу.
+            presentList.AddRange(lombard.Products.Where(
+                o => Convert.ToInt32(
+                    (DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
             productBindingSource.DataSource = presentList;
 
-            //productBindingSource.DataSource
-            //    = lombard.Products.Where(o => o.Giver == activeUser && (Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20))
-            //    .Concat(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
+
         }
 
         private void ClientMain_Load(object sender, EventArgs e)
@@ -86,9 +93,15 @@ namespace ClientApp
         private void ClientMain_VisibleChanged(object sender, EventArgs e)
         {
             presentList.Clear();
-            presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
-            presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
-            productBindingSource.ResetBindings(false);
+            presentList.AddRange(lombard.Products.Where(
+                o => o.Giver == activeUser &&
+                Convert.ToInt32(
+                    (DateTime.Now - o.DateTime).TotalDays) <= o.StoreDays));
+            presentList.AddRange(lombard.Products.Where(o => o.Giver.ID == -1));
+            presentList.AddRange(lombard.Products.Where(
+                o => Convert.ToInt32(
+                    (DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
+            productBindingSource.DataSource = presentList; productBindingSource.ResetBindings(false);
         }
 
         private void ButtonPurchase_Click(object sender, EventArgs e)
@@ -98,7 +111,6 @@ namespace ClientApp
             {
                 Buyer = activeUser
             };
-            //cart.LikedProducts.Clear();
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toBuy = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
@@ -113,20 +125,24 @@ namespace ClientApp
                 {
                     activeUser.PurchasedGoods.Add(cart.LikedProducts[0]);
                     lombard.Products.Remove(cart.LikedProducts[0]);
-                    //cart.Buyer.PurchasedGoods.Add(cart.LikedProducts[i]);
                     cart.LikedProducts.RemoveAt(0);
                 }
 
                 lombard.Clients.Find(o => o.ID == activeUser.ID).PurchasedGoods = activeUser.PurchasedGoods;
 
                 presentList.Clear();
-                presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
-                presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
-                productBindingSource.ResetBindings(false);
+                presentList.AddRange(lombard.Products.Where(
+                    o => o.Giver == activeUser &&
+                    Convert.ToInt32(
+                        (DateTime.Now - o.DateTime).TotalDays) <= o.StoreDays));
+                presentList.AddRange(lombard.Products.Where(o => o.Giver.ID == -1));
+                presentList.AddRange(lombard.Products.Where(
+                    o => Convert.ToInt32(
+                        (DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
+                productBindingSource.DataSource = presentList; productBindingSource.ResetBindings(false);
 
                 lombard.IsDirty = true;
 
-                //cart.Buyer.PurchasedGoods.AddRange(activeUser.PurchasedGoods);
                 buying = new Purchasing(ref cart);
                 buying.ShowDialog();
             }
@@ -142,9 +158,8 @@ namespace ClientApp
             {
                 var toColor = row.DataBoundItem as Product;
                 int days = Convert.ToInt32((DateTime.Now - toColor.DateTime).TotalDays);
-                if (days <= 20)
+                if (days <= 20 && toColor.Giver.ID!=-1)
                 {
-                    //dataGridViewProducts.Rows
                     row.DefaultCellStyle.BackColor = Color.Green;
                     row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(32, 92, 86);
                 }

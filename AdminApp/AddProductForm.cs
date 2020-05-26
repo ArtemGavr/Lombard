@@ -81,7 +81,7 @@ namespace AdminApp
                         Image = image,
                         Type = "item",
                         DateTime = DateTime.Now,
-                        Giver = (new Client(123456789, "lombard", "0")),
+                        Giver = (new Client(-1, "lombard", "0")),
                         StoreDays = days
                     };
                     lombard.Products.Add((Product)item);
@@ -97,7 +97,7 @@ namespace AdminApp
                         Image = image,
                         Type = "property",
                         DateTime = DateTime.Now,
-                        Giver = (new Client(123456789, "lombard", "0")),
+                        Giver = (new Client(-1, "lombard", "0")),
                         StoreDays = days
                     };
                     lombard.Products.Add((Product)prop);

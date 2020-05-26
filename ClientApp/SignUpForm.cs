@@ -14,16 +14,13 @@ namespace ClientApp
         {
             InitializeComponent();
             lombard = new Lombard();
-            //this.textBoxLogin.AutoSize = false;
-            //this.textBoxLogin.Size = new Size(this.textBoxLogin.Size.Width, this.pictureBox1.Size.Height);
         }
 
         private void SignUpForm_Load(object sender, EventArgs e)
         {
             lombard.Load();
-            //lombard.FillTestData(10); //lombard.Save(); lombard.Load();
 
-            //lombard.FillTestData(15);
+            //lombard.FillTestData(100);
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)
@@ -123,7 +120,5 @@ namespace ClientApp
                 ButtonLogin_Click(sender, e);
             }
         }
-
-      
     }
 }

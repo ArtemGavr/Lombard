@@ -13,6 +13,7 @@ namespace Lombard_Project.UserClasses
     {
         // Коллекції для збереження предметів, користувачів та аплікацій.
         public List<Product> Products { private set; get; }
+
         public List<Client> Clients { private set; get; }
         public List<MyApplication> ApplicationsToAdmin { private set; get; }
         public List<MyApplication> ApplicationsToUser { private set; get; }
@@ -40,26 +41,57 @@ namespace Lombard_Project.UserClasses
 
             // Products.
             Products.Clear();
-            var noImage = new Bitmap(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"ClientApp\Images\rose.png"));
+            var noImage = new Bitmap(Properties.Resources.rose);
 
             for (int i = 0; i < n; i++)
             {
                 if (i % 2 == 0)
                 {
-                    Products.Add((Product)new Item($"Item{i}", 10 + i * 10, Clients[i], "Sample", noImage, DateTime.Now - TimeSpan.FromDays(i + 16)) { Image = noImage, StoreDays = 20 });
+                    Products.Add((Product)new Item(
+                        $"Item{i}",
+                        100 + i * 10,
+                        Clients[i], 
+                        "Sample", 
+                        noImage,
+                        DateTime.Now - TimeSpan.FromDays(i + 10)
+                        ) 
+                    { 
+                        StoreDays = 20 
+                    });
                 }
                 else
                 {
-                    Products.Add((Product)new Property($"Property{i}", 10 + i * 10, Clients[i], "Sample", DateTime.Now - TimeSpan.FromDays(i + 16)) { Image = noImage, StoreDays = 20 });
+                    Products.Add((Product)new Property(
+                        $"Property{i}",
+                        100 + i * 10,
+                        Clients[i], 
+                        "Sample", 
+                        DateTime.Now - TimeSpan.FromDays(i + 10)) 
+                    { 
+                        Image = noImage, 
+                        StoreDays = 20 
+                    });
                 }
             }
 
             // ApplicationsToAdmin.
             ApplicationsToAdmin.Clear();
-            const int m = 5;
+            const int m = 10;
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToAdmin.Add(new MyApplication(Products[0], Clients[0]));
+                ApplicationsToAdmin.Add(new MyApplication(
+                    (Product)new Item(
+                        $"Item{n+i}",
+                        100 + i * 10,
+                        Clients[m+i],
+                        "Sample",
+                        noImage,
+                        DateTime.Now - TimeSpan.FromDays(i + 10)
+                        )
+                    {
+                        StoreDays = 20
+                    },
+                    Clients[m + i]));
             }
 
             // ApplicationsToUser.
@@ -67,10 +99,22 @@ namespace Lombard_Project.UserClasses
 
             for (int i = 0; i < m; i++)
             {
-                ApplicationsToUser.Add(new MyApplication(Products[0], Clients[0]));
+                ApplicationsToUser.Add(new MyApplication(
+                    (Product)new Property(
+                        $"Property{n + i}",
+                        100 + i * 10,
+                        Clients[i],
+                        "Sample",
+                        DateTime.Now - TimeSpan.FromDays(i + 10)
+                        )
+                    {
+                        Image = noImage,
+                        StoreDays = 20
+                    },
+                    Clients[i])); 
             }
         }
-        
+
         // Зберегає данні.
         public void Save()
         {
@@ -81,11 +125,11 @@ namespace Lombard_Project.UserClasses
         public void Load()
         {
             new FilesWork(this).Load();
-
+           //FillTestData(25);
             for (int i = 0; i < Products.Count; i++)
             {
                 int days = Convert.ToInt32((DateTime.Now - Products[i].DateTime).TotalDays);
-                if (days > Products[i].StoreDays)
+                if (days >= Products[i].StoreDays)
                     Products[i].Price = Convert.ToInt32(1.2 * Products[i].Value);
                 else
                     Products[i].Price = Convert.ToInt32((1 + (0.2 * days / Products[i].StoreDays)) * Products[i].Value);

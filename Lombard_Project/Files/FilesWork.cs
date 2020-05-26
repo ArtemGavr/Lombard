@@ -6,13 +6,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Lombard_Project.FilesWorkk
 {
-    //тЗбереження та завантаження серіалізованих данних.
+    // Збереження та завантаження серіалізованих данних.
     public class FilesWork
     {
         private Lombard lombard;
         private const string fileName = "lombard.bin";
-
-        private string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp/bin/Release/");
+        //private string fileName = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp/bin/Release/lombard.bin");
 
         public FilesWork(Lombard lombard)
         {
@@ -22,7 +21,7 @@ namespace Lombard_Project.FilesWorkk
         // Збереження даних у файл.
         public void Save()
         {
-            using (Stream stream = File.Create(path + fileName))
+            using (Stream stream = File.Create(fileName))
             {
                 var serializer = new BinaryFormatter();
                 serializer.Serialize(stream, lombard);
@@ -32,7 +31,7 @@ namespace Lombard_Project.FilesWorkk
         // Завaнтаження данних з файлу.
         public void Load()
         {
-            using (Stream stream = File.OpenRead(path + fileName))
+            using (Stream stream = File.OpenRead(fileName))
             {
                 var serializer = new BinaryFormatter();
                 Lombard lmd = (Lombard)serializer.Deserialize(stream);
