@@ -24,12 +24,12 @@ namespace ClientApp
             labelDays.Text = work.Prod.StoreDays.ToString();
         }
 
-        private void buttonAccept_Click(object sender, EventArgs e)
+        private void ButtonAccept_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You accepted the lombard offer", "accept", MessageBoxButtons.OK);
         }
 
-        private void buttonDecline_Click(object sender, EventArgs e)
+        private void ButtonDecline_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You declined the lombard offer", "Decline", MessageBoxButtons.OK);
         }

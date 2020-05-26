@@ -34,7 +34,5 @@ namespace Lombard_Project.UserClasses
         public Item() : base()
         {
         }
-
-
     }
 }

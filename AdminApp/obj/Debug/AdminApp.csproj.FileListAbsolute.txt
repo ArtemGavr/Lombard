@@ -17,3 +17,7 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ProductAddForm.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ProductEditForm.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.ApplicEditionAdmin.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.AddProductForm.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.EditProductForm.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.EditApplicAdmin.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\AdminApp\obj\Debug\AdminApp.csproj.CoreCompileInputs.cache

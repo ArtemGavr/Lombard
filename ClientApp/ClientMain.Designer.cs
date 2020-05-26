@@ -54,7 +54,7 @@
             this.buttonApplications.TabIndex = 0;
             this.buttonApplications.Text = "Send applications";
             this.buttonApplications.UseVisualStyleBackColor = true;
-            this.buttonApplications.Click += new System.EventHandler(this.buttonApplications_Click);
+            this.buttonApplications.Click += new System.EventHandler(this.ButtonApplications_Click);
             // 
             // buttonVerify
             // 
@@ -64,7 +64,7 @@
             this.buttonVerify.TabIndex = 1;
             this.buttonVerify.Text = "Verify applics";
             this.buttonVerify.UseVisualStyleBackColor = true;
-            this.buttonVerify.Click += new System.EventHandler(this.buttonVerify_Click);
+            this.buttonVerify.Click += new System.EventHandler(this.ButtonVerify_Click);
             // 
             // dataGridViewProducts
             // 
@@ -89,8 +89,8 @@
             this.dataGridViewProducts.RowTemplate.Height = 28;
             this.dataGridViewProducts.Size = new System.Drawing.Size(1094, 436);
             this.dataGridViewProducts.TabIndex = 2;
-            this.dataGridViewProducts.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridViewProducts_DataBindingComplete);
-            this.dataGridViewProducts.BindingContextChanged += new System.EventHandler(this.dataGridViewProducts_BindingContextChanged);
+            this.dataGridViewProducts.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DataGridViewProducts_DataBindingComplete);
+            this.dataGridViewProducts.BindingContextChanged += new System.EventHandler(this.DataGridViewProducts_BindingContextChanged);
             // 
             // productBindingSource
             // 
@@ -104,7 +104,7 @@
             this.buttonPurchase.TabIndex = 3;
             this.buttonPurchase.Text = "Purchase";
             this.buttonPurchase.UseVisualStyleBackColor = true;
-            this.buttonPurchase.Click += new System.EventHandler(this.buttonPurchase_Click);
+            this.buttonPurchase.Click += new System.EventHandler(this.ButtonPurchase_Click);
             // 
             // nameDataGridViewTextBoxColumn
             // 

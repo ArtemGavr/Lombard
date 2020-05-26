@@ -17,7 +17,6 @@ namespace Lombard_Project.UserClasses
         public override int Price { set; get; }
         public override int StoreDays { get; set; }
 
-
         public Property(string name, int value, Client giver, string descr, DateTime? t = null)
         {
             Name = name;
@@ -34,7 +33,5 @@ namespace Lombard_Project.UserClasses
         public Property() : base()
         {
         }
-
-
     }
 }

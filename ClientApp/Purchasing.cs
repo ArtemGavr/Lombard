@@ -1,12 +1,5 @@
 ﻿using Lombard_Project.UserClasses;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClientApp
@@ -14,18 +7,20 @@ namespace ClientApp
     public partial class Purchasing : Form
     {
         public Cart cart;
+
         public Purchasing()
         {
             InitializeComponent();
         }
-        public Purchasing(ref Cart cart):this()
+
+        public Purchasing(ref Cart cart) : this()
         {
             this.cart = cart;
             productBindingSource.DataSource = this.cart.LikedProducts;
             productBindingSourcePurchased.DataSource = this.cart.Buyer.PurchasedGoods;
         }
 
-        private void buttonAccept_Click(object sender, EventArgs e)
+        private void ButtonAccept_Click(object sender, EventArgs e)
         {
             if (cart.LikedProducts.Count > 0)
             {
@@ -48,7 +43,7 @@ namespace ClientApp
             if (cart.LikedProducts.Count < 1)
             {
                 tabControl1.Select();
-               tabControl1.DeselectTab("tabPageBuy");
+                tabControl1.DeselectTab("tabPageBuy");
             }
         }
     }

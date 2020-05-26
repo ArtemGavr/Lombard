@@ -68,7 +68,7 @@
             this.buttonAccept.TabIndex = 2;
             this.buttonAccept.Text = "Accept";
             this.buttonAccept.UseVisualStyleBackColor = false;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            this.buttonAccept.Click += new System.EventHandler(this.ButtonAccept_Click);
             // 
             // buttonBack
             // 
@@ -127,7 +127,7 @@
             this.buttonDecline.TabIndex = 23;
             this.buttonDecline.Text = "Decline";
             this.buttonDecline.UseVisualStyleBackColor = false;
-            this.buttonDecline.Click += new System.EventHandler(this.buttonDecline_Click);
+            this.buttonDecline.Click += new System.EventHandler(this.ButtonDecline_Click);
             // 
             // pictureBox
             // 

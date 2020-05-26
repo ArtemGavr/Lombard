@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicMakeClient.cs">
+    <Compile Include="MakeApplicClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicMakeClient.Designer.cs">
-      <DependentUpon>ApplicMakeClient.cs</DependentUpon>
+    <Compile Include="MakeApplicClient.Designer.cs">
+      <DependentUpon>MakeApplicClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchasing.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     <Compile Include="ApplicIncomeToClient.Designer.cs">
       <DependentUpon>ApplicIncomeToClient.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ApplicMakeClient.resx">
-      <DependentUpon>ApplicMakeClient.cs</DependentUpon>
+    <EmbeddedResource Include="MakeApplicClient.resx">
+      <DependentUpon>MakeApplicClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchasing.resx">
       <DependentUpon>Purchasing.cs</DependentUpon>

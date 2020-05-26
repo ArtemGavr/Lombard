@@ -7,16 +7,14 @@ using System.IO;
 namespace Lombard_Project.UserClasses
 {
     [Serializable]
-    public class Lombard 
+    public class Lombard
     {
         public List<Product> Products { private set; get; }
         public List<Client> Clients { private set; get; }
         public List<MyApplication> ApplicationsToAdmin { private set; get; }
         public List<MyApplication> ApplicationsToUser { private set; get; }
 
-
         public bool IsDirty = false;
-
 
         public Lombard()
         {
@@ -24,7 +22,6 @@ namespace Lombard_Project.UserClasses
             Clients = new List<Client>();
             ApplicationsToAdmin = new List<MyApplication>();
             ApplicationsToUser = new List<MyApplication>();
-
         }
 
         public void FillTestData(int n)
@@ -50,7 +47,6 @@ namespace Lombard_Project.UserClasses
                 {
                     Products.Add((Product)new Property($"Property{i}", 10 + i * 10, Clients[i], "Sample", DateTime.Now - TimeSpan.FromDays(i + 16)) { Image = noImage, StoreDays = 20 });
                 }
-
             }
 
             // ApplicationsToAdmin
@@ -67,7 +63,6 @@ namespace Lombard_Project.UserClasses
             for (int i = 0; i < m; i++)
             {
                 ApplicationsToUser.Add(new MyApplication(Products[0], Clients[0]));
-
             }
         }
 

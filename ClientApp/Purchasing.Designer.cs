@@ -179,7 +179,7 @@
             this.buttonAccept.TabIndex = 24;
             this.buttonAccept.Text = "Buy";
             this.buttonAccept.UseVisualStyleBackColor = false;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            this.buttonAccept.Click += new System.EventHandler(this.ButtonAccept_Click);
             // 
             // tabControl1
             // 

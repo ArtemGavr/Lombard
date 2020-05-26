@@ -71,7 +71,7 @@
             this.buttonRegister.TabIndex = 8;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.buttonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
             // pictureBox1
             // 
@@ -97,7 +97,7 @@
             this.buttonLogin.TabIndex = 0;
             this.buttonLogin.Text = "LogIn";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // textBoxPass
             // 
@@ -128,7 +128,7 @@
             this.textBoxLogin.Size = new System.Drawing.Size(293, 53);
             this.textBoxLogin.TabIndex = 3;
             this.textBoxLogin.Text = "Client1";
-            this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLogin_KeyDown);
+            //this.textBoxLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxLogin_KeyDown);
             // 
             // buttonClose
             // 
@@ -141,9 +141,9 @@
             this.buttonClose.TabIndex = 1;
             this.buttonClose.Text = "x";
             this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            this.buttonClose.MouseEnter += new System.EventHandler(this.buttonClose_MouseEnter);
-            this.buttonClose.MouseLeave += new System.EventHandler(this.buttonClose_MouseLeave);
+            this.buttonClose.Click += new System.EventHandler(this.ButtonClose_Click);
+            this.buttonClose.MouseEnter += new System.EventHandler(this.ButtonClose_MouseEnter);
+            this.buttonClose.MouseLeave += new System.EventHandler(this.ButtonClose_MouseLeave);
             // 
             // Login
             // 

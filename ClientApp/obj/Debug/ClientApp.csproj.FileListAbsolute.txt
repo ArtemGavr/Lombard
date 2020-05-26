@@ -31,3 +31,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicVerificationClient.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.ApplicIncomeToClient.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.Purchasing.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.MakeApplicClient.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache

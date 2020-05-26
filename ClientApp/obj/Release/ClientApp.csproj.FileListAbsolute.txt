@@ -5,7 +5,6 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\bin\Release\Lombard_Project.pdb
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\bin\Release\Lombard_Project.dll.config
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.csprojAssemblyReference.cache
-C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.ApplicMakeClient.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.Purchasing.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.ClientMain.resources
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.ApplicVerificationClient.resources
@@ -17,3 +16,5 @@ C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.csproj.CopyComplete
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.exe
 C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.pdb
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.MakeApplicClient.resources
+C:\Users\Xiaomi\OneDrive - Kharkov National University of Radioelectronics\!OOP\Lombard\ClientApp\obj\Release\ClientApp.csproj.CoreCompileInputs.cache

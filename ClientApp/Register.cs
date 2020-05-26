@@ -16,7 +16,7 @@ namespace ClientApp
             this.lombard = lombard;
         }
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        private void ButtonRegister_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(RegName.Text) || string.IsNullOrWhiteSpace(RegPassword.Text) || string.IsNullOrWhiteSpace(IDbox.Text))
             {
@@ -98,7 +98,7 @@ namespace ClientApp
             }
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
             Form CustomerAutor = System.Windows.Forms.Application.OpenForms[0];
             CustomerAutor.Left = this.Left;

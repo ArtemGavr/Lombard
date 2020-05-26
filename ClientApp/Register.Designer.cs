@@ -62,7 +62,7 @@
             this.buttonCancel.TabIndex = 23;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // IDbox
             // 
@@ -91,7 +91,7 @@
             this.buttonRegister.TabIndex = 17;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = false;
-            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
+            this.buttonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
             // RegPassword
             // 

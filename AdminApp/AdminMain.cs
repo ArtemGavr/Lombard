@@ -46,28 +46,28 @@ namespace AdminApp
             }
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void SaveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             lombard.Save();
             MessageBox.Show("Information is saved", "Artem", MessageBoxButtons.OK);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void dataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridViewApplics_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var toedit = dataGridViewApplics.Rows[e.RowIndex].DataBoundItem as MyApplication;
             if (toedit != null)
             {
-                var edit = new ApplicEditionAdmin(toedit);
+                var edit = new EditApplicAdmin(toedit);
                 if (edit.ShowDialog() == DialogResult.OK)
                 {
                     lombard.ApplicationsToAdmin.Remove(edit.work);///
@@ -79,7 +79,7 @@ namespace AdminApp
             }
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
             for (int i = 0; i < selectedRowCount; i++)
@@ -96,13 +96,13 @@ namespace AdminApp
             productBindingSource.ResetBindings(false);
         }
 
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toEdit = dataGridViewProducts.SelectedRows[0].DataBoundItem as Product;
-                var pf = new ProductEditForm(toEdit);
+                var pf = new EditProductForm(toEdit);
                 if (pf.ShowDialog() == DialogResult.OK)
                 {
                     productBindingSource.ResetBindings(false);
@@ -112,10 +112,10 @@ namespace AdminApp
             
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
-            var adding = new ProductAddForm(ref lombard);
+            var adding = new AddProductForm(ref lombard);
             if (adding.ShowDialog() == DialogResult.OK)
             {
                 productBindingSource.ResetBindings(false);

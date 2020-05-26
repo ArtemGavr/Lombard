@@ -38,7 +38,6 @@ namespace Lombard_Project.FilesWorkk
                 Copy(lmd.Clients, lombard.Clients);
                 Copy(lmd.ApplicationsToAdmin, lombard.ApplicationsToAdmin);
                 Copy(lmd.ApplicationsToUser, lombard.ApplicationsToUser);
-          
             }
 
             void Copy<T>(List<T> from, List<T> to)

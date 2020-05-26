@@ -14,7 +14,7 @@ namespace ClientApp
 
         private Client activeUser;
 
-        List<Product> presentList;
+        private List<Product> presentList;
 
         public ClientMain(ref Lombard lombard, Client user)
         {
@@ -27,7 +27,7 @@ namespace ClientApp
             presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > o.StoreDays));
             productBindingSource.DataSource = presentList;
 
-            //productBindingSource.DataSource 
+            //productBindingSource.DataSource
             //    = lombard.Products.Where(o => o.Giver == activeUser && (Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20))
             //    .Concat(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
         }
@@ -68,19 +68,18 @@ namespace ClientApp
             }
         }
 
-        private void buttonApplications_Click(object sender, EventArgs e)
+        private void ButtonApplications_Click(object sender, EventArgs e)
         {
-            Form applics = new ApplicMakeClient(ref lombard, activeUser);
+            Form applics = new MakeApplicClient(ref lombard, activeUser);
             this.Hide();
             applics.Show();
-           
         }
 
-        private void buttonVerify_Click(object sender, EventArgs e)
+        private void ButtonVerify_Click(object sender, EventArgs e)
         {
             Form acceptVies = new ApplicIncomeToClient(ref lombard, activeUser);
             this.Hide();
-            
+
             acceptVies.Show();
         }
 
@@ -90,19 +89,20 @@ namespace ClientApp
             presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
             presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
             productBindingSource.ResetBindings(false);
-
         }
 
-        private void buttonPurchase_Click(object sender, EventArgs e)
+        private void ButtonPurchase_Click(object sender, EventArgs e)
         {
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            Cart cart = new Cart();
-            cart.Buyer = activeUser;
+            Cart cart = new Cart
+            {
+                Buyer = activeUser
+            };
             //cart.LikedProducts.Clear();
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toBuy = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
-                
+
                 cart.LikedProducts.Add(toBuy);
             }
 
@@ -117,43 +117,36 @@ namespace ClientApp
                     cart.LikedProducts.RemoveAt(0);
                 }
 
-                
-
                 lombard.Clients.Find(o => o.ID == activeUser.ID).PurchasedGoods = activeUser.PurchasedGoods;
-
 
                 presentList.Clear();
                 presentList.AddRange(lombard.Products.Where(o => o.Giver == activeUser && Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) <= 20));
                 presentList.AddRange(lombard.Products.Where(o => Convert.ToInt32((DateTime.Now - o.DateTime).TotalDays) > 20));
                 productBindingSource.ResetBindings(false);
-               
+
                 lombard.IsDirty = true;
 
                 //cart.Buyer.PurchasedGoods.AddRange(activeUser.PurchasedGoods);
                 buying = new Purchasing(ref cart);
                 buying.ShowDialog();
-
-
             }
-            
         }
 
-        private void dataGridViewProducts_BindingContextChanged(object sender, EventArgs e)
+        private void DataGridViewProducts_BindingContextChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void dataGridViewProducts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void DataGridViewProducts_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewProducts.Rows)
             {
                 var toColor = row.DataBoundItem as Product;
                 int days = Convert.ToInt32((DateTime.Now - toColor.DateTime).TotalDays);
-                if (days<=20)
+                if (days <= 20)
                 {
-                    //dataGridViewProducts.Rows 
+                    //dataGridViewProducts.Rows
                     row.DefaultCellStyle.BackColor = Color.Green;
-                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(32,92,86);
+                    row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(32, 92, 86);
                 }
             }
         }

@@ -1,7 +1,5 @@
 ﻿using Lombard_Project.UserClasses;
 using System;
-using System.Collections.Generic;
-using System.Collections;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,7 +8,7 @@ namespace ClientApp
 {
     public partial class ApplicIncomeToClient : Form
     {
-        private Lombard lombard;
+        private readonly Lombard lombard;
         private Client activeUser;
 
         public ApplicIncomeToClient(ref Lombard lombard, Client client)
@@ -18,7 +16,7 @@ namespace ClientApp
             InitializeComponent();
             this.lombard = lombard;
             this.activeUser = client;
-        
+
             myApplicationBindingSource.DataSource = lombard.ApplicationsToUser.Where(o => o.Giver == activeUser);
         }
 
@@ -27,7 +25,7 @@ namespace ClientApp
             myApplicationBindingSource.ResetBindings(false);
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
+        private void ButtonBack_Click(object sender, EventArgs e)
         {
             Form CustomerMain = System.Windows.Forms.Application.OpenForms[1];
             CustomerMain.Left = this.Left;
@@ -44,7 +42,7 @@ namespace ClientApp
             CustomerMain.Show();
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             MyApplication toaccept = dataGridView1.Rows[e.RowIndex].DataBoundItem as MyApplication;
             if (toaccept != null)
@@ -71,7 +69,5 @@ namespace ClientApp
                 }
             }
         }
-
-      
     }
 }
