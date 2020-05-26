@@ -74,6 +74,7 @@
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(270, 199);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(262, 179);
@@ -238,7 +239,7 @@
             0,
             0});
             // 
-            // ProductAddForm
+            // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +261,7 @@
             this.Controls.Add(this.buttonAddProduct);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
-            this.Name = "ProductAddForm";
+            this.Name = "AddProductForm";
             this.Text = "AddingProductForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductAddForm_FormClosing);
             this.Load += new System.EventHandler(this.ProductAddForm_Load);

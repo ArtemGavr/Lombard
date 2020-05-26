@@ -55,6 +55,7 @@ namespace AdminApp
         private void SaveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             lombard.Save();
+            lombard.IsDirty = false;
             MessageBox.Show("Information is saved", "Artem", MessageBoxButtons.OK);
         }
 

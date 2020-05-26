@@ -70,7 +70,6 @@
             // buttonSendAppl
             // 
             this.buttonSendAppl.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonSendAppl.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSendAppl.FlatAppearance.BorderSize = 0;
             this.buttonSendAppl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSendAppl.Location = new System.Drawing.Point(601, 362);
@@ -240,7 +239,7 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Days to store";
             // 
-            // ApplicEditionAdmin
+            // EditApplicAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,7 +261,7 @@
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
-            this.Name = "ApplicEditionAdmin";
+            this.Name = "EditApplicAdmin";
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditionForm_FormClosing);
             this.Load += new System.EventHandler(this.EditionForm_Load);

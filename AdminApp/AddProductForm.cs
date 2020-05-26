@@ -44,7 +44,7 @@ namespace AdminApp
                 textBoxDescription.BackColor = Color.White;
                 textBoxPrice.BackColor = Color.White;
             }
-            else if (textBoxName.Text.Length <= 3)
+            else if (textBoxName.Text.Length < 3)
             {
                 textBoxName.BackColor = Color.Red;
                 MessageBox.Show("Name has inappropriate length(less than 3), try again");

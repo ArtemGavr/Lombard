@@ -12,7 +12,7 @@ namespace Lombard_Project.FilesWorkk
         private Lombard lombard;
         private const string fileName = "lombard.bin";
 
-        private string path = "";//Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName, @"");
+        private string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp/bin/Release/");
 
         public FilesWork(Lombard lombard)
         {
@@ -29,7 +29,7 @@ namespace Lombard_Project.FilesWorkk
             }
         }
 
-        // Заввнтаження данних з файлу.
+        // Завaнтаження данних з файлу.
         public void Load()
         {
             using (Stream stream = File.OpenRead(path + fileName))
