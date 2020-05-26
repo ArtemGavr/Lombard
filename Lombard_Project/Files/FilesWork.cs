@@ -11,7 +11,7 @@ namespace Lombard_Project.FilesWorkk
         private Lombard lombard;
         private const string fileName = "lombard.bin";
 
-        private string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp\bin\Debug\");
+        private string path = "";//Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName, @"");
 
         public FilesWork(Lombard lombard)
         {

@@ -1,5 +1,6 @@
 ﻿using Lombard_Project.UserClasses;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace AdminApp
@@ -82,17 +83,22 @@ namespace AdminApp
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int selectedRowCount = dataGridViewProducts.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            List<Product> deletion = new List<Product>();
             for (int i = 0; i < selectedRowCount; i++)
             {
                 var toDel = dataGridViewProducts.SelectedRows[i].DataBoundItem as Product;
                 var res = MessageBox.Show($"Delete {toDel.Name} ?", "", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
                 {
-                    lombard.Products.Remove(toDel);
-                    //productBindingSource.ResetBindings(false);
-                    lombard.IsDirty = true;
+                    deletion.Add(toDel);
                 }
             }
+            for (int i = 0; i < deletion.Count; i++) 
+            {
+                lombard.Products.Remove(deletion[i]);
+                lombard.IsDirty = true;
+            }
+            
             productBindingSource.ResetBindings(false);
         }
 
@@ -109,12 +115,10 @@ namespace AdminApp
                     lombard.IsDirty = true;
                 }
             }
-            
         }
 
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
             var adding = new AddProductForm(ref lombard);
             if (adding.ShowDialog() == DialogResult.OK)
             {
