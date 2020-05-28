@@ -32,8 +32,8 @@
             this.buttonApplications = new System.Windows.Forms.Button();
             this.buttonVerify = new System.Windows.Forms.Button();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonPurchase = new System.Windows.Forms.Button();
+            this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
@@ -42,33 +42,41 @@
             this.giverNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.storeDaysDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonApplications
             // 
+            this.buttonApplications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonApplications.Location = new System.Drawing.Point(960, 445);
             this.buttonApplications.Name = "buttonApplications";
             this.buttonApplications.Size = new System.Drawing.Size(121, 58);
             this.buttonApplications.TabIndex = 0;
-            this.buttonApplications.Text = "Send applications";
+            this.buttonApplications.Text = "Send Applications";
             this.buttonApplications.UseVisualStyleBackColor = true;
             this.buttonApplications.Click += new System.EventHandler(this.ButtonApplications_Click);
             // 
             // buttonVerify
             // 
-            this.buttonVerify.Location = new System.Drawing.Point(960, 530);
+            this.buttonVerify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVerify.Location = new System.Drawing.Point(960, 521);
             this.buttonVerify.Name = "buttonVerify";
             this.buttonVerify.Size = new System.Drawing.Size(121, 52);
             this.buttonVerify.TabIndex = 1;
-            this.buttonVerify.Text = "Verify applics";
+            this.buttonVerify.Text = "Verify Applications";
             this.buttonVerify.UseVisualStyleBackColor = true;
             this.buttonVerify.Click += new System.EventHandler(this.ButtonVerify_Click);
             // 
             // dataGridViewProducts
             // 
             this.dataGridViewProducts.AllowUserToAddRows = false;
+            this.dataGridViewProducts.AllowUserToDeleteRows = false;
+            this.dataGridViewProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewProducts.AutoGenerateColumns = false;
             this.dataGridViewProducts.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -82,29 +90,39 @@
             this.dateTimeDataGridViewTextBoxColumn,
             this.storeDaysDataGridViewTextBoxColumn});
             this.dataGridViewProducts.DataSource = this.productBindingSource;
-            this.dataGridViewProducts.Location = new System.Drawing.Point(1, 2);
+            this.dataGridViewProducts.Location = new System.Drawing.Point(1, 3);
             this.dataGridViewProducts.Name = "dataGridViewProducts";
             this.dataGridViewProducts.ReadOnly = true;
             this.dataGridViewProducts.RowHeadersWidth = 62;
             this.dataGridViewProducts.RowTemplate.Height = 28;
-            this.dataGridViewProducts.Size = new System.Drawing.Size(1094, 436);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(1094, 435);
             this.dataGridViewProducts.TabIndex = 2;
             this.dataGridViewProducts.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DataGridViewProducts_DataBindingComplete);
             this.dataGridViewProducts.BindingContextChanged += new System.EventHandler(this.DataGridViewProducts_BindingContextChanged);
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
-            // 
             // buttonPurchase
             // 
-            this.buttonPurchase.Location = new System.Drawing.Point(22, 484);
+            this.buttonPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPurchase.Location = new System.Drawing.Point(833, 521);
             this.buttonPurchase.Name = "buttonPurchase";
             this.buttonPurchase.Size = new System.Drawing.Size(121, 52);
             this.buttonPurchase.TabIndex = 3;
             this.buttonPurchase.Text = "Purchase";
             this.buttonPurchase.UseVisualStyleBackColor = true;
             this.buttonPurchase.Click += new System.EventHandler(this.ButtonPurchase_Click);
+            // 
+            // pictureBoxHelp
+            // 
+            this.pictureBoxHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxHelp.Image = global::ClientApp.Properties.Resources.help;
+            this.pictureBoxHelp.InitialImage = global::ClientApp.Properties.Resources.help;
+            this.pictureBoxHelp.Location = new System.Drawing.Point(12, 510);
+            this.pictureBoxHelp.Name = "pictureBoxHelp";
+            this.pictureBoxHelp.Size = new System.Drawing.Size(64, 63);
+            this.pictureBoxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHelp.TabIndex = 4;
+            this.pictureBoxHelp.TabStop = false;
+            this.pictureBoxHelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxHelp_MouseMove);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -172,12 +190,16 @@
             // 
             // storeDaysDataGridViewTextBoxColumn
             // 
+            this.storeDaysDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.storeDaysDataGridViewTextBoxColumn.DataPropertyName = "StoreDays";
             this.storeDaysDataGridViewTextBoxColumn.HeaderText = "StoreDays";
             this.storeDaysDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.storeDaysDataGridViewTextBoxColumn.Name = "storeDaysDataGridViewTextBoxColumn";
             this.storeDaysDataGridViewTextBoxColumn.ReadOnly = true;
-            this.storeDaysDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
             // ClientMain
             // 
@@ -185,16 +207,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1093, 585);
+            this.Controls.Add(this.pictureBoxHelp);
             this.Controls.Add(this.buttonPurchase);
             this.Controls.Add(this.dataGridViewProducts);
             this.Controls.Add(this.buttonVerify);
             this.Controls.Add(this.buttonApplications);
+            this.DoubleBuffered = true;
+            this.HelpButton = true;
             this.Name = "ClientMain";
             this.Text = "ClientMain";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientMain_FormClosing);
             this.Load += new System.EventHandler(this.ClientMain_Load);
             this.VisibleChanged += new System.EventHandler(this.ClientMain_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,5 +241,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn giverNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn storeDaysDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBoxHelp;
     }
 }

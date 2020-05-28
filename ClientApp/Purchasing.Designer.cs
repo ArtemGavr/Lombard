@@ -42,6 +42,7 @@
             this.buttonAccept = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBuy = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPagePurchased = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -53,7 +54,6 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSourcePurchased = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -67,6 +67,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -84,7 +87,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1129, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(1139, 492);
             this.dataGridView1.TabIndex = 0;
             // 
             // nameDataGridViewTextBoxColumn
@@ -157,11 +160,12 @@
             // 
             // buttonDecline
             // 
+            this.buttonDecline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDecline.BackColor = System.Drawing.SystemColors.Control;
             this.buttonDecline.DialogResult = System.Windows.Forms.DialogResult.No;
             this.buttonDecline.FlatAppearance.BorderSize = 0;
             this.buttonDecline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDecline.Location = new System.Drawing.Point(1002, 401);
+            this.buttonDecline.Location = new System.Drawing.Point(1012, 498);
             this.buttonDecline.Name = "buttonDecline";
             this.buttonDecline.Size = new System.Drawing.Size(122, 57);
             this.buttonDecline.TabIndex = 25;
@@ -170,10 +174,11 @@
             // 
             // buttonAccept
             // 
+            this.buttonAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAccept.BackColor = System.Drawing.SystemColors.Control;
             this.buttonAccept.FlatAppearance.BorderSize = 0;
             this.buttonAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAccept.Location = new System.Drawing.Point(1002, 495);
+            this.buttonAccept.Location = new System.Drawing.Point(1012, 590);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(122, 57);
             this.buttonAccept.TabIndex = 24;
@@ -190,7 +195,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1140, 591);
+            this.tabControl1.Size = new System.Drawing.Size(1150, 688);
             this.tabControl1.TabIndex = 26;
             // 
             // tabPageBuy
@@ -203,9 +208,23 @@
             this.tabPageBuy.Location = new System.Drawing.Point(4, 29);
             this.tabPageBuy.Name = "tabPageBuy";
             this.tabPageBuy.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBuy.Size = new System.Drawing.Size(1132, 558);
+            this.tabPageBuy.Size = new System.Drawing.Size(1142, 655);
             this.tabPageBuy.TabIndex = 0;
             this.tabPageBuy.Text = "Buy";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(8, 590);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 57);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // tabPagePurchased
             // 
@@ -215,17 +234,18 @@
             this.tabPagePurchased.Location = new System.Drawing.Point(4, 29);
             this.tabPagePurchased.Name = "tabPagePurchased";
             this.tabPagePurchased.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePurchased.Size = new System.Drawing.Size(1132, 558);
+            this.tabPagePurchased.Size = new System.Drawing.Size(1142, 655);
             this.tabPagePurchased.TabIndex = 1;
             this.tabPagePurchased.Text = "Purchased";
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 501);
+            this.button1.Location = new System.Drawing.Point(8, 590);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 57);
             this.button1.TabIndex = 26;
@@ -236,6 +256,9 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -253,7 +276,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(1129, 492);
+            this.dataGridView2.Size = new System.Drawing.Size(1142, 492);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -324,25 +347,12 @@
             // 
             this.productBindingSourcePurchased.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(8, 445);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 57);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // Purchasing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1140, 591);
+            this.ClientSize = new System.Drawing.Size(1150, 688);
             this.Controls.Add(this.tabControl1);
             this.Name = "Purchasing";
             this.Text = "Cart";

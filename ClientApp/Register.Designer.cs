@@ -55,7 +55,7 @@
             this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCancel.Location = new System.Drawing.Point(78, 404);
+            this.buttonCancel.Location = new System.Drawing.Point(16, 447);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(141, 68);
@@ -84,7 +84,7 @@
             this.buttonRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Arial Narrow", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRegister.Location = new System.Drawing.Point(434, 404);
+            this.buttonRegister.Location = new System.Drawing.Point(575, 447);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(141, 68);
@@ -125,7 +125,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 89);
+            this.panel2.Size = new System.Drawing.Size(744, 134);
             this.panel2.TabIndex = 12;
             // 
             // CloseButton
@@ -135,10 +135,10 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CloseButton.Location = new System.Drawing.Point(1209, -2);
+            this.CloseButton.Location = new System.Drawing.Point(1209, 21);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(0, 49);
+            this.CloseButton.Size = new System.Drawing.Size(15, 49);
             this.CloseButton.TabIndex = 2;
             this.CloseButton.Text = "x";
             this.CloseButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -163,7 +163,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(729, 89);
+            this.label1.Size = new System.Drawing.Size(744, 134);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(729, 529);
+            this.ClientSize = new System.Drawing.Size(744, 539);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.RegPassReenter);
             this.Controls.Add(this.labelPassword);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.RegPassword);
             this.Controls.Add(this.RegName);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Register";
             this.Text = "Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);

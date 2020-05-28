@@ -50,6 +50,13 @@ namespace AdminApp
                 textBoxPrice.BackColor = Color.White;
                 textBoxPrice.Text = string.Empty;
             }
+            else if (Convert.ToInt32(textBoxPrice.Text) < 1)
+            {
+                textBoxPrice.BackColor = Color.Red;
+                MessageBox.Show("Price cannot be negative, try again");
+                textBoxPrice.BackColor = Color.White;
+                textBoxPrice.Text = string.Empty;
+            }
             else if (pictureBox.Image == null)
             {
                 MessageBox.Show("Picture not added, try again");

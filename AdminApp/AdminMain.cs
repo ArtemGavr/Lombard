@@ -132,7 +132,7 @@ namespace AdminApp
         private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-            "To get help click help",
+            "To add/edit/delete product - select row \n To work with an application - double click it.",
             "Help",
             MessageBoxButtons.OK,
             MessageBoxIcon.Question,

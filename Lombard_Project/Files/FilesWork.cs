@@ -10,8 +10,8 @@ namespace Lombard_Project.FilesWorkk
     public class FilesWork
     {
         private Lombard lombard;
-        //private const string fileName = "lombard.bin";
-        private string fileName = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp/bin/Release/lombard.bin");
+        private const string fileName = "lombard.bin";
+        //private string fileName = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, @"AdminApp/bin/Release/lombard.bin");
 
         public FilesWork(Lombard lombard)
         {

@@ -41,6 +41,8 @@ namespace ClientApp
 
         private void ClientMain_Load(object sender, EventArgs e)
         {
+            if (presentList.Count>0)
+            dataGridViewProducts.Rows[0].Selected = true ;
             productBindingSource.ResetBindings(false);
         }
 
@@ -164,6 +166,19 @@ namespace ClientApp
                     row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(32, 92, 86);
                 }
             }
+        }
+
+        private void pictureBoxHelp_MouseMove(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show(
+            "To add/edit/delete product - select row \n To work with an application - double click it.",
+            "Help",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1,
+            0,
+            "https://github.com/ArtemGavr/Lombard/tree/master/Docs",
+            "keyword");
         }
     }
 }

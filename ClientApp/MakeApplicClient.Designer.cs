@@ -46,18 +46,18 @@
             // textBoxPriceDesired
             // 
             this.textBoxPriceDesired.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPriceDesired.Location = new System.Drawing.Point(477, 100);
+            this.textBoxPriceDesired.Location = new System.Drawing.Point(85, 272);
             this.textBoxPriceDesired.Name = "textBoxPriceDesired";
-            this.textBoxPriceDesired.Size = new System.Drawing.Size(153, 35);
+            this.textBoxPriceDesired.Size = new System.Drawing.Size(267, 35);
             this.textBoxPriceDesired.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(472, 68);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(77, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 29);
+            this.label2.Size = new System.Drawing.Size(255, 46);
             this.label2.TabIndex = 10;
             this.label2.Text = "Desired price";
             // 
@@ -68,7 +68,8 @@
             this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Location = new System.Drawing.Point(82, 325);
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(486, 425);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(122, 57);
             this.buttonBack.TabIndex = 9;
@@ -81,7 +82,8 @@
             this.buttonSendAppl.BackColor = System.Drawing.SystemColors.Control;
             this.buttonSendAppl.FlatAppearance.BorderSize = 0;
             this.buttonSendAppl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSendAppl.Location = new System.Drawing.Point(597, 325);
+            this.buttonSendAppl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSendAppl.Location = new System.Drawing.Point(673, 425);
             this.buttonSendAppl.Name = "buttonSendAppl";
             this.buttonSendAppl.Size = new System.Drawing.Size(122, 57);
             this.buttonSendAppl.TabIndex = 8;
@@ -92,17 +94,18 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxName.Location = new System.Drawing.Point(242, 100);
+            this.textBoxName.Location = new System.Drawing.Point(85, 137);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(153, 35);
+            this.textBoxName.Size = new System.Drawing.Size(267, 35);
             this.textBoxName.TabIndex = 7;
             // 
             // radioButtonItemName
             // 
             this.radioButtonItemName.AutoSize = true;
-            this.radioButtonItemName.Location = new System.Drawing.Point(242, 40);
+            this.radioButtonItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonItemName.Location = new System.Drawing.Point(85, 40);
             this.radioButtonItemName.Name = "radioButtonItemName";
-            this.radioButtonItemName.Size = new System.Drawing.Size(112, 24);
+            this.radioButtonItemName.Size = new System.Drawing.Size(198, 41);
             this.radioButtonItemName.TabIndex = 12;
             this.radioButtonItemName.TabStop = true;
             this.radioButtonItemName.Text = "Item Name";
@@ -111,9 +114,10 @@
             // radioButtonProperty
             // 
             this.radioButtonProperty.AutoSize = true;
-            this.radioButtonProperty.Location = new System.Drawing.Point(242, 68);
+            this.radioButtonProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonProperty.Location = new System.Drawing.Point(85, 90);
             this.radioButtonProperty.Name = "radioButtonProperty";
-            this.radioButtonProperty.Size = new System.Drawing.Size(145, 24);
+            this.radioButtonProperty.Size = new System.Drawing.Size(267, 41);
             this.radioButtonProperty.TabIndex = 13;
             this.radioButtonProperty.TabStop = true;
             this.radioButtonProperty.Text = "Property adress";
@@ -122,28 +126,29 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDescription.Location = new System.Drawing.Point(581, 209);
+            this.textBoxDescription.Location = new System.Drawing.Point(85, 406);
+            this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(153, 35);
+            this.textBoxDescription.Size = new System.Drawing.Size(267, 76);
             this.textBoxDescription.TabIndex = 15;
             // 
             // Description
             // 
             this.Description.AutoSize = true;
-            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Description.Location = new System.Drawing.Point(576, 177);
+            this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Description.Location = new System.Drawing.Point(77, 357);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(135, 29);
+            this.Description.Size = new System.Drawing.Size(221, 46);
             this.Description.TabIndex = 14;
             this.Description.Text = "Description";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(271, 158);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(478, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 29);
+            this.label3.Size = new System.Drawing.Size(129, 46);
             this.label3.TabIndex = 32;
             this.label3.Text = "Image";
             // 
@@ -151,9 +156,9 @@
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(252, 190);
+            this.pictureBox.Location = new System.Drawing.Point(486, 96);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(232, 159);
+            this.pictureBox.Size = new System.Drawing.Size(309, 240);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 31;
             this.pictureBox.TabStop = false;
@@ -163,12 +168,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // ApplicMakeClient
+            // MakeApplicClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(867, 551);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.textBoxDescription);
@@ -180,7 +185,8 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
-            this.Name = "ApplicMakeClient";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "MakeApplicClient";
             this.Text = "Applic";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicClient_FormClosing);
             this.Load += new System.EventHandler(this.Applic_Load);

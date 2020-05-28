@@ -140,6 +140,7 @@
     <Content Include="Images\user.png" />
     <Content Include="Images\key.png" />
     <Content Include="Images\rose.png" />
+    <None Include="Resources\icons8-help-50.png" />
     <None Include="Resources\rose.png" />
   </ItemGroup>
   <ItemGroup>

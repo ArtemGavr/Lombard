@@ -66,6 +66,13 @@ namespace ClientApp
                 textBoxPriceDesired.BackColor = Color.White;
                 textBoxPriceDesired.Text = string.Empty;
             }
+            else if (Convert.ToInt32(textBoxPriceDesired.Text) < 1)
+            {
+                textBoxPriceDesired.BackColor = Color.Red;
+                MessageBox.Show("Price cannot be negative, try again");
+                textBoxPriceDesired.BackColor = Color.White;
+                textBoxPriceDesired.Text = string.Empty;
+            }
 
             #endregion correctcheck
 
