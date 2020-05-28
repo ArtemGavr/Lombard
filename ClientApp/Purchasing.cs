@@ -40,11 +40,19 @@ namespace ClientApp
         {
             productBindingSource.ResetBindings(false);
             productBindingSourcePurchased.ResetBindings(false);
+           
             if (cart.LikedProducts.Count < 1)
             {
                 tabControl1.Select();
                 tabControl1.DeselectTab("tabPageBuy");
             }
+
+            int price = 0;
+            for (int i=0; i < cart.LikedProducts.Count; i++)
+            {
+                price += cart.LikedProducts[i].Price;
+            }
+            labelPrice.Text = $"Total price: {price} $";
         }
     }
 }

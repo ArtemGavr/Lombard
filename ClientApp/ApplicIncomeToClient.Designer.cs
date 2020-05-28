@@ -34,8 +34,10 @@
             this.clientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myApplicationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonBack = new System.Windows.Forms.Button();
+            this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -100,12 +102,26 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
+            // pictureBoxHelp
+            // 
+            this.pictureBoxHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxHelp.Image = global::ClientApp.Properties.Resources.help;
+            this.pictureBoxHelp.InitialImage = global::ClientApp.Properties.Resources.help;
+            this.pictureBoxHelp.Location = new System.Drawing.Point(388, 424);
+            this.pictureBoxHelp.Name = "pictureBoxHelp";
+            this.pictureBoxHelp.Size = new System.Drawing.Size(34, 36);
+            this.pictureBoxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHelp.TabIndex = 5;
+            this.pictureBoxHelp.TabStop = false;
+            this.pictureBoxHelp.MouseHover += new System.EventHandler(this.pictureBoxHelp_MouseHover);
+            // 
             // ApplicIncomeToClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(434, 472);
+            this.Controls.Add(this.pictureBoxHelp);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ApplicIncomeToClient";
@@ -114,6 +130,7 @@
             this.Load += new System.EventHandler(this.VerifyView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myApplicationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,5 +142,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBoxHelp;
     }
 }

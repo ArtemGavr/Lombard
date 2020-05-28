@@ -69,5 +69,18 @@ namespace ClientApp
                 }
             }
         }
+
+        private void pictureBoxHelp_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+            "To accept or declline application - doubleclick it.",
+            "Help",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1,
+            0,
+            "https://github.com/ArtemGavr/Lombard/tree/master/Docs",
+            "keyword");
+        }
     }
 }

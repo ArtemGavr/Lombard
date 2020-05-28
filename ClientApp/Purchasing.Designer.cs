@@ -54,6 +54,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSourcePurchased = new System.Windows.Forms.BindingSource(this.components);
+            this.labelPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -201,6 +202,7 @@
             // tabPageBuy
             // 
             this.tabPageBuy.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPageBuy.Controls.Add(this.labelPrice);
             this.tabPageBuy.Controls.Add(this.button2);
             this.tabPageBuy.Controls.Add(this.buttonAccept);
             this.tabPageBuy.Controls.Add(this.dataGridView1);
@@ -347,6 +349,17 @@
             // 
             this.productBindingSourcePurchased.DataSource = typeof(Lombard_Project.UserClasses.Product);
             // 
+            // labelPrice
+            // 
+            this.labelPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPrice.Location = new System.Drawing.Point(8, 519);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(126, 46);
+            this.labelPrice.TabIndex = 29;
+            this.labelPrice.Text = "label2";
+            // 
             // Purchasing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -361,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPageBuy.ResumeLayout(false);
+            this.tabPageBuy.PerformLayout();
             this.tabPagePurchased.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSourcePurchased)).EndInit();
@@ -395,5 +409,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label labelPrice;
     }
 }

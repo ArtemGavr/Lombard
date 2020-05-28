@@ -41,9 +41,10 @@ namespace ClientApp
 
         private void ClientMain_Load(object sender, EventArgs e)
         {
-            if (presentList.Count>0)
-            dataGridViewProducts.Rows[0].Selected = true ;
+            
             productBindingSource.ResetBindings(false);
+            if (presentList.Count > 0)
+                dataGridViewProducts.Rows[0].Selected = true;
         }
 
         private void ClientMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -171,7 +172,7 @@ namespace ClientApp
         private void pictureBoxHelp_MouseMove(object sender, MouseEventArgs e)
         {
             MessageBox.Show(
-            "To add/edit/delete product - select row \n To work with an application - double click it.",
+            "To buy product - select row and click purchase.",
             "Help",
             MessageBoxButtons.OK,
             MessageBoxIcon.Question,
