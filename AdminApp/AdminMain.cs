@@ -24,6 +24,8 @@ namespace AdminApp
             //lombard.FillTestData(10);
             //lombard.IsDirty = true;
             productBindingSource.ResetBindings(false);
+            if (dataGridViewProducts.Rows.Count > 0)
+                dataGridViewProducts.Rows[0].Selected = true;
             myApplicationBindingSource1.ResetBindings(false);
         }
 

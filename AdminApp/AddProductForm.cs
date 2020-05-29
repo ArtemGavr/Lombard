@@ -12,6 +12,7 @@ namespace AdminApp
         public AddProductForm()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         public AddProductForm(ref Lombard lombard) : this()

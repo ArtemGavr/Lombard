@@ -12,6 +12,7 @@ namespace AdminApp
         public EditProductForm()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         public EditProductForm(Product toedit) : this()

@@ -43,8 +43,8 @@ namespace ClientApp
         {
             
             productBindingSource.ResetBindings(false);
-            if (presentList.Count > 0)
-                dataGridViewProducts.Rows[0].Selected = true;
+            if (dataGridViewProducts.Rows.Count > 0)
+                dataGridViewProducts.Rows[2].Selected = true;
         }
 
         private void ClientMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -169,7 +169,7 @@ namespace ClientApp
             }
         }
 
-        private void pictureBoxHelp_MouseMove(object sender, MouseEventArgs e)
+        private void PictureBoxHelp_MouseMove(object sender, MouseEventArgs e)
         {
             MessageBox.Show(
             "To buy product - select row and click purchase.",

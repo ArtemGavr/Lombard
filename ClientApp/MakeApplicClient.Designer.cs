@@ -46,18 +46,20 @@
             // textBoxPriceDesired
             // 
             this.textBoxPriceDesired.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPriceDesired.Location = new System.Drawing.Point(85, 272);
+            this.textBoxPriceDesired.Location = new System.Drawing.Point(57, 177);
+            this.textBoxPriceDesired.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPriceDesired.Name = "textBoxPriceDesired";
-            this.textBoxPriceDesired.Size = new System.Drawing.Size(267, 35);
+            this.textBoxPriceDesired.Size = new System.Drawing.Size(179, 26);
             this.textBoxPriceDesired.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(77, 223);
+            this.label2.Location = new System.Drawing.Point(51, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 46);
+            this.label2.Size = new System.Drawing.Size(174, 31);
             this.label2.TabIndex = 10;
             this.label2.Text = "Desired price";
             // 
@@ -69,9 +71,10 @@
             this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(486, 425);
+            this.buttonBack.Location = new System.Drawing.Point(324, 276);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(122, 57);
+            this.buttonBack.Size = new System.Drawing.Size(84, 37);
             this.buttonBack.TabIndex = 9;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -83,9 +86,10 @@
             this.buttonSendAppl.FlatAppearance.BorderSize = 0;
             this.buttonSendAppl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSendAppl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSendAppl.Location = new System.Drawing.Point(673, 425);
+            this.buttonSendAppl.Location = new System.Drawing.Point(449, 276);
+            this.buttonSendAppl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSendAppl.Name = "buttonSendAppl";
-            this.buttonSendAppl.Size = new System.Drawing.Size(122, 57);
+            this.buttonSendAppl.Size = new System.Drawing.Size(93, 37);
             this.buttonSendAppl.TabIndex = 8;
             this.buttonSendAppl.Text = "Send application";
             this.buttonSendAppl.UseVisualStyleBackColor = false;
@@ -94,18 +98,20 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxName.Location = new System.Drawing.Point(85, 137);
+            this.textBoxName.Location = new System.Drawing.Point(57, 89);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(267, 35);
+            this.textBoxName.Size = new System.Drawing.Size(179, 26);
             this.textBoxName.TabIndex = 7;
             // 
             // radioButtonItemName
             // 
             this.radioButtonItemName.AutoSize = true;
             this.radioButtonItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonItemName.Location = new System.Drawing.Point(85, 40);
+            this.radioButtonItemName.Location = new System.Drawing.Point(57, 26);
+            this.radioButtonItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonItemName.Name = "radioButtonItemName";
-            this.radioButtonItemName.Size = new System.Drawing.Size(198, 41);
+            this.radioButtonItemName.Size = new System.Drawing.Size(138, 30);
             this.radioButtonItemName.TabIndex = 12;
             this.radioButtonItemName.TabStop = true;
             this.radioButtonItemName.Text = "Item Name";
@@ -115,9 +121,10 @@
             // 
             this.radioButtonProperty.AutoSize = true;
             this.radioButtonProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonProperty.Location = new System.Drawing.Point(85, 90);
+            this.radioButtonProperty.Location = new System.Drawing.Point(57, 58);
+            this.radioButtonProperty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonProperty.Name = "radioButtonProperty";
-            this.radioButtonProperty.Size = new System.Drawing.Size(267, 41);
+            this.radioButtonProperty.Size = new System.Drawing.Size(183, 30);
             this.radioButtonProperty.TabIndex = 13;
             this.radioButtonProperty.TabStop = true;
             this.radioButtonProperty.Text = "Property adress";
@@ -126,19 +133,21 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDescription.Location = new System.Drawing.Point(85, 406);
+            this.textBoxDescription.Location = new System.Drawing.Point(57, 264);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(267, 76);
+            this.textBoxDescription.Size = new System.Drawing.Size(179, 51);
             this.textBoxDescription.TabIndex = 15;
             // 
             // Description
             // 
             this.Description.AutoSize = true;
             this.Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Description.Location = new System.Drawing.Point(77, 357);
+            this.Description.Location = new System.Drawing.Point(51, 232);
+            this.Description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(221, 46);
+            this.Description.Size = new System.Drawing.Size(151, 31);
             this.Description.TabIndex = 14;
             this.Description.Text = "Description";
             // 
@@ -146,9 +155,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(478, 24);
+            this.label3.Location = new System.Drawing.Point(319, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 46);
+            this.label3.Size = new System.Drawing.Size(89, 31);
             this.label3.TabIndex = 32;
             this.label3.Text = "Image";
             // 
@@ -156,9 +166,10 @@
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(486, 96);
+            this.pictureBox.Location = new System.Drawing.Point(324, 62);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(309, 240);
+            this.pictureBox.Size = new System.Drawing.Size(207, 157);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 31;
             this.pictureBox.TabStop = false;
@@ -170,10 +181,10 @@
             // 
             // MakeApplicClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(867, 551);
+            this.ClientSize = new System.Drawing.Size(578, 358);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.textBoxDescription);
@@ -186,6 +197,7 @@
             this.Controls.Add(this.buttonSendAppl);
             this.Controls.Add(this.textBoxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MakeApplicClient";
             this.Text = "Applic";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ApplicClient_FormClosing);

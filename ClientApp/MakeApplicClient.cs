@@ -22,6 +22,7 @@ namespace ClientApp
 
         private void Applic_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)

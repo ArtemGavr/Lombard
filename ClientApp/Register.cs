@@ -14,6 +14,7 @@ namespace ClientApp
         {
             InitializeComponent();
             this.lombard = lombard;
+            this.MaximizeBox = false;
         }
 
         private void ButtonRegister_Click(object sender, EventArgs e)

@@ -122,7 +122,7 @@
             this.pictureBoxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHelp.TabIndex = 4;
             this.pictureBoxHelp.TabStop = false;
-            this.pictureBoxHelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxHelp_MouseMove);
+            this.pictureBoxHelp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBoxHelp_MouseMove);
             // 
             // nameDataGridViewTextBoxColumn
             // 
