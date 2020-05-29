@@ -31,22 +31,26 @@ namespace Lombard_Project.FilesWorkk
         // Завaнтаження данних з файлу.
         public void Load()
         {
-            using (Stream stream = File.OpenRead(fileName))
+            try
             {
-                var serializer = new BinaryFormatter();
-                Lombard lmd = (Lombard)serializer.Deserialize(stream);
+                using (Stream stream = File.OpenRead(fileName))
+                {
+                    var serializer = new BinaryFormatter();
+                    Lombard lmd = (Lombard)serializer.Deserialize(stream);
 
-                Copy(lmd.Products, lombard.Products);
-                Copy(lmd.Clients, lombard.Clients);
-                Copy(lmd.ApplicationsToAdmin, lombard.ApplicationsToAdmin);
-                Copy(lmd.ApplicationsToUser, lombard.ApplicationsToUser);
-            }
+                    Copy(lmd.Products, lombard.Products);
+                    Copy(lmd.Clients, lombard.Clients);
+                    Copy(lmd.ApplicationsToAdmin, lombard.ApplicationsToAdmin);
+                    Copy(lmd.ApplicationsToUser, lombard.ApplicationsToUser);
+                }
 
-            void Copy<T>(List<T> from, List<T> to)
-            {
-                to.Clear();
-                to.AddRange(from);
+                void Copy<T>(List<T> from, List<T> to)
+                {
+                    to.Clear();
+                    to.AddRange(from);
+                }
             }
+            catch { lombard.FillTestData(25); }
         }
     }
 }

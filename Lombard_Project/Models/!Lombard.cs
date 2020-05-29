@@ -124,8 +124,8 @@ namespace Lombard_Project.UserClasses
         // Завантажує данні.
         public void Load()
         {
-            new FilesWork(this).Load();
-            //FillTestData(25);
+            try { new FilesWork(this).Load(); }
+            catch { FillTestData(25); }
             for (int i = 0; i < Products.Count; i++)
             {
                 int days = Convert.ToInt32((DateTime.Now - Products[i].DateTime).TotalDays);
