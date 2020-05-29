@@ -44,7 +44,7 @@ namespace ClientApp
             
             productBindingSource.ResetBindings(false);
             if (dataGridViewProducts.Rows.Count > 0)
-                dataGridViewProducts.Rows[2].Selected = true;
+                dataGridViewProducts.Rows[0].Selected = true;
         }
 
         private void ClientMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -172,7 +172,7 @@ namespace ClientApp
         private void PictureBoxHelp_MouseMove(object sender, MouseEventArgs e)
         {
             MessageBox.Show(
-            "To buy product - select row and click purchase.",
+            "Green indicates products on storage, traded by the client. \nTo buy product - select row and click purchase.",
             "Help",
             MessageBoxButtons.OK,
             MessageBoxIcon.Question,
@@ -181,5 +181,7 @@ namespace ClientApp
             "https://github.com/ArtemGavr/Lombard/tree/master/Docs",
             "keyword");
         }
+
+       
     }
 }
